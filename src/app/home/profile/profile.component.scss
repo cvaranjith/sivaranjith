@@ -337,14 +337,14 @@
     border-radius: 10px;
     letter-spacing: 2px;
     color: #0EF6CC;
-  font-family: 'Alfa Slab One', cursive;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   padding: 3px;
   font-size: 28px;
   flex-wrap: wrap;
   font-weight: 700;
   position: relative;
   display: inline-block;
-  background-color: #3A4f50;
+  background-color: #343838;
   text-transform: uppercase;
   animation: waviy 1s infinite;
   animation-delay: calc(.1s * var(--i));
@@ -760,6 +760,7 @@
         font-weight: 500;
         color: #1c3032;
         margin-bottom: 0;
+        padding-right: 10px;
     }
     span{
         font-size: 14px;
