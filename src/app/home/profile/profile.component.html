@@ -1,0 +1,1328 @@
+<!--nav bar-->
+<nav class="navbar ">
+
+    <div class="col-md-12 repnav">
+      <div class="row">
+          <div class="col-md-4">
+              <div class="row d-flex justify-content-around">
+                  <span class="btn">Profile</span>
+                  <span class="btn">About Me</span>
+                  <span class="btn">Portfolio</span>
+                  <span class="btn">Contect</span>
+              </div>
+          </div>
+          <div class="col-md-8">
+             <div class="row justify-content-end">
+               <img src="../../../assets/images/logo-res.png" width="50" alt="">
+             </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="col-md-12 respnav mb-2">
+        <div class="row justify-content-start">
+            <button class="btn" onclick="openNav()"><i class="icofont icofont-navigation-menu"></i></button>
+        </div>
+    </div>
+    <div id="box">
+        <div id="items">
+          <div class="item">Item 1</div>
+          <div class="item">Item 2</div>
+          <div class="item">Item 3</div>
+          <div class="item">Item 4</div>
+          <div class="item">Item 5</div>
+        </div>
+      </div>
+</nav>
+
+<!--section-->
+<div class="col-md-12">
+    <div class="row d-flex justify-content-between section">
+        <!--left Nav-->
+        <div class="left-nav card shadow">
+
+           <div class="col-md-11 left-profile">
+               <div class="col-md-12 profile-section ">
+                   <!--Img Profile-->
+                  <div class="d-flex justify-content-center">
+                    <div class="img-sec">
+                        <img src="../../../assets/images/profile.jpg" class="img-profile r" alt="">
+                   </div>
+                  </div>
+                   <div class="text-center personal">
+                       <h4>S.SIVARANJITH</h4>
+                       <p>Full Stack Developer</p>
+                       <p>Software Engineer</p>
+                   </div>
+
+               </div>
+
+               <div class="col-md-12 address-section">
+                    <div class="col-md-11 address">
+                        <div class="">
+                            <div class="row justify-content-between">
+                                <h5>Residency</h5>
+                                <p>India</p>
+                            </div>
+                            <div class="row justify-content-between">
+                                <h5>City</h5>
+                                <p>Nagercoil</p>
+                            </div>
+                            <div class="row justify-content-between">
+                                <h5>Age</h5>
+                                <p>24</p>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+<!-- Skil -->
+               <div class="col-md-12 mt-2 mb-2 card shadow card-skil">
+                <div class="col-md-12 mt-2 mb-2">
+                    <h4 class="text-center tech">My Skill</h4>
+                </div>
+                    <div class="skil-section">
+                       
+                        <div class="col-md-12 skil-pie">
+                            <div class="row">
+                               <div class="col">
+                                    <div class="row d-flex justify-content-center">
+                                        <div class="pie animate" style="--p:83;">
+                                            80%
+                                        </div>
+                                    </div>
+                                    <h5 class="text-center">Angular</h5>
+                               </div>
+                                <div class="col">
+                                    <div class="row d-flex justify-content-center">
+                                        <div class="pie animate" style="--p:74;">
+                                            74%
+                                        </div>
+                                    </div>                                    
+                                    <h5 class="text-center">Laravel</h5>
+                                </div>
+                                <div class="col">
+                                  <div class="row d-flex justify-content-center">
+                                    <div class="pie animate" style="--p:66;">
+                                        66%
+                                    </div>
+                                  </div>
+                                    <h5 class="text-center">Flask</h5>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <hr class="line">
+
+
+                    <div class="bar-chart">
+                        <div class="col-md-11 ">
+                            <div class="fun" >
+                                <div class="bar" *ngFor="let skill of Skill">
+                                    <div class="d-flex justify-content-center">
+                                        <div class="row justify-content-between mt-2 chart">
+                                            <h6>{{skill.name}}</h6> <h6>{{skill.datapre}}</h6>
+                                        </div>
+                                    </div>
+                                    <div class="progress mt-2">
+                                        <div class="progress-bar" role="progressbar" [ngStyle]="{'width': skill.datapre}" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                               </div>
+                            </div>                           
+                        
+                        </div>
+                    </div>
+
+                    <hr class="line">
+
+                   
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col">
+                                    <h5 class="text-center tech">Year of Experience 2</h5>
+                                </div>
+                            </div>
+                        </div>
+              
+               </div>
+
+           </div>
+
+        </div>
+        <!--Right Nav-->
+        <div class="right-nav card shadow">
+            <div class="d-flex justify-content-center ">
+                <div class="col-md-12 right-profile ">
+                    <div class="row banner-section">
+                        <div class="col-md-6">
+                           <div class="text-sec">
+                            <div class="messages">
+                                <!-- Message 2 -->
+                                 <span style="--i:1">Hi'</span>
+                                 <span style="--i:2"> I'm </span>
+                                 <span style="--i:3">SIVARANJITH </span>
+                                 <br>
+                                 <span style="--i:4">FullStack </span>
+                                 <span style="--i:5">Developer</span>
+                                </div>
+                           </div>
+                           
+                        </div>
+                        <div class="col-md-6 banner-img">
+                            <div class="row justify-content-end">
+                                <img src="../../../assets/images/banner-img.png" alt="">
+                            </div>                           
+                        </div>
+                    </div>
+
+                    <!-- experiance detail -->
+
+                    <div class="experiance mt-1">
+                        <div class="col-lg-11 mx-auto">
+                            <div class="row d-flex justify-content-around">
+                                
+                                <div class="col-sm-3 exp-list mt-2">
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                           <div class="row d-flex justify-content-center exp-img">
+                                               <i class="icofont icofont-license"></i>
+                                           </div>
+                                        </div>
+                                        <div class="col-lg-7 exp-text">
+                                            <p>2+</p>
+                                            <span class="text-cente text-nowrap">Years Experience</span>
+                                        </div>
+                                    </div>
+                                </div> 
+                                
+                                <div class="col-sm-3 exp-list mt-2">
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <div class="row d-flex justify-content-center exp-img">
+                                                <i class="icofont icofont-library"></i>
+                                               
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-7 exp-text">
+                                            <p>4+</p>
+                                            <span class="text-cente text-nowrap">Completed Projects</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 exp-list mt-2">
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <div class="row d-flex justify-content-center exp-img">
+                                                <i class="icofont icofont-badge"></i>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-7 exp-text">
+                                            <p>10+</p>
+                                            <span class="text-cente text-nowrap">Honars & Awards</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                                 
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Development Details -->
+                    <div class="col-md-12 mt-3 ">
+                        <div class="row d-flex justify-content-around develop">
+                            <div class="card shadow col-md-3 m-1">
+                               <div class="card-header">
+                                <div class="row">
+                                    <div class="col-md-12 devhead text-center">
+                                        <h3>Web Development</h3>
+                                    </div>
+                                   </div>
+                               </div>
+                               <div class="content">
+                                   <p class="pt-1">
+                                    Is also known as website development, creating, building, 
+                                    & maintaining websites. In a web applications that run online on a browser. 
+                                     include web design, web programming & database management.
+                                   </p>
+                               </div>
+
+                            </div>
+                            <div class="card shadow col-md-3 m-1">
+                               <div class="card-header">
+                                <div class="row">
+                                    <div class="col-md-12 devhead text-center">
+                                        <h3 class="">Application Development</h3>
+                                    </div>
+                                   </div>
+                               </div>
+                               <div class="content">
+                                 <p class="pt-1">
+                                    Application development is the process of designing,
+                                     building, and implementing software applications. 
+                                     It can be done by massive organizations with large teams working
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card shadow col-md-3 m-1">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-md-12 devhead text-center">
+                                            <h3 class="">FullStack Developer</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <p class="pt-1">
+                                        Full stack development It refers to the development 
+                                        of both front end(client side) and back end(server side) 
+                                        portions of web application
+                                       </p>
+                                   </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--pref-->
+                    <div class="col-md-12 mt-4 mb-3 pref">
+                        <div class="col-md-6 pt-2 pref-head">
+                            <p>{{ days }}</p>
+                            <h3>I'm SIVARANJITH S</h3>
+                            <p>Software Engineer</p>
+                        </div>
+                        <div class="col-lg-11 mt-2 pref-cont mx-auto">
+                            <p>
+                                An ambitious and self-motivated web developer
+                                 with a considerable technical skill who possesses self- discipline 
+                                 and ability to work with minimum of supervision. Able to play a key role 
+                                 in website development to ensure maximum accessibility, user experience 
+                                 and usability. A quick learner who can absorb new ideas and can communicate clearly and effectively.
+                            </p>
+                            <!-- <p>I am dedicated to perfecting my craft by 
+                                learning from more seasoned developers, remaining humble,
+                                 and continuously making strides to learn all 
+                                 that I can about development.</p> -->
+                        </div>
+                        <div class="col-lg-8 mx-auto social-media ">
+                            <div class="colmd-12 ">
+                                <div class="row justify-content-center">
+                                    <h4>Connect Via</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mt-2 media-sec">
+                                <div class="row">
+                                    <div class="col-md-6 ">
+                                        <div class="row d-flex justify-content-around mb-2">
+                                            <div class=" ">
+                                                <a class="btn" target="_blank" href="https://www.linkedin.com/siva-ranjith">  <button class="btn media link" type="button">
+                                                    <i class='bx bxl-linkedin'></i>
+                                                </button> </a>
+                                            </div>
+                                            <div class=" ">
+                                                <a class="btn" target="_blank" href="https://gitlab.com/cvaranjith">   <button class="btn media gitlab" type="button">
+                                                    <i class='bx bxl-gitlab'></i>
+                                                </button> </a>
+                                            </div>
+                                            <div class="">
+                                                <a class="btn" target="_blank" href="https://github.com/cvaranjith">  <button class="btn media github" type="button">
+                                                    <i class='bx bxl-github'></i>
+                                                </button> </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="row d-flex justify-content-around mb-2">
+                                            <div class="">
+                                               <a class="btn" target="_blank" href="https://www.instagram.com/b_a_d_kin_g/channel/"> <button class="btn media insta" type="button">
+                                                <i class='bx bxl-instagram-alt'></i>
+                                            </button></a>
+                                            </div>
+                                            <div class="">
+                                                <a class="btn" target="_blank" href="https://twitter.com/cva_ranjith">   <button class="btn media twitter" type="button">
+                                                    <i class='bx bxl-twitter'></i>
+                                                </button> </a>
+                                            </div>
+                                            <div class="">
+                                                <a class="btn" target="_blank" href="https://m.facebook.com/100004215310950/">   <button class="btn media facebook" type="button">
+                                                    <i class='bx bxl-meta'></i>
+                                                </button> </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--about me-->
+<div class="container mb-3 about-me">
+    <div class="col-md-12">
+        <div class="row d-flex justify-content-center">
+            <h3 class="">About Me</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="about-img">
+                    <img src="../../../assets/images/personal.png" width="250px" height="250px" alt="">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="about-text row">
+                   <div class="col-lg-10">
+                      <div class="col-md-12">
+                          <div class="row mt-1">
+                              <div class="col-sm-4">
+                                  <h3><i class="icofont icofont-business-man-alt-3"></i> Name</h3>
+                              </div>
+                              <div class="col-sm-2">
+                                <h3>:</h3>
+                              </div>
+                               <div class="col-sm-5">
+                                    <h4 class="mt-1">Sivaranjith S</h4>
+                                </div>
+                          </div>
+                          <div class="row mt-1">
+                            <div class="col-sm-4">
+                                <h3><i class="icofont icofont-smart-phone"></i> Phone</h3>
+                            </div>
+                            <div class="col-sm-2">
+                              <h3>:</h3>
+                            </div>
+                             <div class="col-sm-5">
+                                  <h4 class="text-wrap mt-1">+91 8778136294</h4>
+                              </div>
+                        </div>
+                        <div class="row mt-1">
+                            <div class="col-sm-4">
+                                <h3><i class="icofont icofont-mail-box"></i> Gmail</h3>
+                            </div>
+                            <div class="col-sm-2">
+                              <h3>:</h3>
+                            </div>
+                             <div class="col-sm-5">
+                                  <h4 class="text-wrap mt-1">sivaranjith87791@gmail.com</h4>
+                              </div>
+                        </div>
+                        <div class="row mt-1">
+                            <div class="col-sm-4">
+                                <h3><i class="icofont icofont-tasks-alt"></i> DOB</h3>
+                            </div>
+                            <div class="col-sm-2">
+                              <h3>:</h3>
+                            </div>
+                             <div class="col-sm-5">
+                                  <h4 class="mt-1">30-03-1998</h4>
+                              </div>
+                        </div><div class="row mt-1">
+                            <div class="col-sm-4">
+                                <h3 class="text-nowrap"><i class="icofont icofont-location-pin"></i> Address</h3>
+                            </div>
+                            <div class="col-sm-2">
+                              <h3>:</h3>
+                            </div>
+                             <div class="col-sm-5">
+                                  <h4 class="mt-1">7/4c8 Azathnager, Suchindrum, Kanniyakumari</h4>
+                              </div>
+                        </div>
+                      </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+
+        <!--interest-->
+       <div class="interest-res mt-1">
+           <div class="col-md-12">
+               <h3 class="text-center">Hobbies</h3>
+           </div>
+        <div class="col-md-12 interest">
+            <div class="row d-flex justify-content-around">
+                <div class="col-sm-3">
+                    <div class="row d-flex justify-content-center">                        
+                        <div class="col-sm-12">
+                            <h4><i class="icofont icofont-travelling"></i>Travel</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 ">
+                    <div class="row d-flex justify-content-center">                       
+                        <div class="col-sm-12">
+                            <h4><i class="icofont icofont-racer"></i>Drive</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 ">
+                    <div class="row">                        
+                        <div class="col-sm-12">
+                            <h4><i class="icofont icofont-headphone-alt-1"></i>Music</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </div>
+    </div>
+</div>
+
+<!--Journey-->
+<div class="container journey">
+    <div class="col-md-12">
+        <div class="row justify-content-center mt-2 journey-head">
+            <h3>Qualification</h3>
+        </div>
+        <div class="row mt-3 journey-cont">
+            <div class="col-md-6">
+                <div class="row justify-content-center">
+                    <h3><i class="icofont icofont-businessman"></i>Experiance</h3>
+                </div>                
+                   
+                       <div class="col-md-12 job-exp">
+                           <div class="col-md-12 mb-2">
+                              
+                                   <div class="border">
+                                    <h3>Software Engineer at Feather Softwares</h3>
+                                    <h6>In Nagercoil</h6>
+                                    <p>Currently working</p>
+                                    <span>Using Technology</span>
+                                        <ul class="list">
+                                            <li class="list">Laravel</li>
+                                            <li class="list">IONIC</li>
+                                            <li class="list">Angular</li>
+                                        </ul>
+                                        
+                                   </div>
+                               
+                               
+                           </div>
+
+                           <div class="col-md-12 mb-2">
+                               
+                                    <div class="border">
+                                        <h3>Junior Software Engineer at DayPay</h3>
+                                        <h6>In Nagercoil</h6>
+                                        <p>2020-2021</p>
+                                        <span>Using Technology</span>
+                                        <ul class="list">
+                                            <li class="list">Python</li>
+                                            <li class="list">PHP</li>
+                                            <li class="list">Angular</li>
+                                        </ul>
+                                        
+                                    </div>
+                                
+                            </div>
+                           
+                       </div>
+              
+            </div>
+            <div class="col-md-6">
+                <div class="row justify-content-center">
+                    <h3><i class="icofont icofont-graduate-alt"></i>Education</h3>
+                </div>
+          
+                    <div class="col-md-12 job-exp">
+                        <div class="col-md-12 mb-2">
+                            <div class="col-md-12">
+                               
+                                    <div class="border">
+                                        <h3>Mechanical Engineer BE(71%)</h3>
+                                        <h6>Rohini College of Engg & Tech</h6>
+                                         <p>2017-2020</p>
+                                    </div>
+                              
+                            </div>
+                         </div>
+                        <div class="col-md-12 mb-2">
+                            <div class="col-md-12">
+                               
+                                    <div class="border">
+                                        <h3>Mechanical Diploma(87%)</h3>
+                                        <h6>Sun Institute of Polytechnic</h6>
+                                         <p>2014-2017</p>
+                                    </div>
+                             
+                            </div>
+                         </div>
+                         <div class="col-md-12 mb-2">
+                             <div class="col-md-12">
+                               
+                                    <div class="border">
+                                       <h3>State Board SSLC(65%)</h3>
+                                       <h6>Carmel Higher Secondary School</h6>
+                                       <p>2013-2014</p>
+                                    </div>
+                               
+                             </div>
+                         </div>
+                    </div>
+         
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Portfolio-->
+
+<div class="container-fluid portfolio">
+    <div class="col-md-12">
+        <div class="row justify-content-center">
+            <h3>Portfolio</h3>
+        </div>
+        <div class="row d-flex justify-content-around">
+            <div class="col-md-3 card shadow project-1">
+                <div class="card-header">
+                    <h5>Web Application</h5>
+                    <h6>Angular</h6>
+                    <p>Online Shop</p>
+                   </div>
+                   <div class="card-body">
+                        
+                   </div>                   
+                   <div class="card-footer">
+                       <div class="col-md-12">
+                        <div class="row d-flex justify-content-end">
+                            <button class="btn btn-light text-nowrap" data-toggle="modal" data-target="#largeModal-1">See More <i class="icofont icofont-stylish-right"></i></button>
+                        </div>
+                       </div>
+                  </div>               
+            </div>
+            <div class="col-md-3 card shadow project-2">
+                <div class="card-header">
+                    <h5>Web Application</h5>
+                    <h6>Core PHP</h6>
+                    <p>Qc Wing</p>
+                   </div>
+                   <div class="card-body">
+                        
+                   </div>                   
+                   <div class="card-footer">
+                       <div class="col-md-12">
+                        <div class="row d-flex justify-content-end">
+                            <button class="btn btn-light text-nowrap"  data-toggle="modal" data-target="#largeModal-2">See More <i class="icofont icofont-stylish-right"></i></button>
+                        </div>
+                       </div>
+                  </div>    
+           </div>
+           <div class="col-md-3 card shadow project-3">
+            <div class="card-header">
+                <h5>Web Application</h5>
+                <h6>Angular</h6>
+                <p>Resume</p>
+               </div>
+               <div class="card-body">
+                    
+               </div>                   
+               <div class="card-footer">
+                   <div class="col-md-12">
+                    <div class="row d-flex justify-content-end">
+                        <button class="btn btn-light text-nowrap"  data-toggle="modal" data-target="#largeModal-3">See More <i class="icofont icofont-stylish-right"></i></button>
+                    </div>
+                   </div>
+              </div>    
+           
+        </div>
+        </div>
+        <div class="row d-flex justify-content-around">
+            <div class="col-md-3 card shadow project-4">
+                <div class="card-header">
+                    <h5>Application</h5>
+                    <h6>Ionic</h6>
+                    <p>Puthiya Pathai</p>
+                   </div>
+                   <div class="card-body">
+                        
+                   </div>                   
+                   <div class="card-footer">
+                       <div class="col-md-12">
+                        <div class="row d-flex justify-content-end">
+                            <button class="btn btn-light text-nowrap" data-toggle="modal" data-target="#largeModal-4">See More <i class="icofont icofont-stylish-right"></i></button>
+                        </div>
+                       </div>
+                  </div>               
+            </div>
+            <div class="col-md-3 card shadow project-5">
+                <div class="card-header">
+                    <h5>Web Application</h5>
+                    <h6>Laravel</h6>
+                    <p>Ayuryogems</p>
+                   </div>
+                   <div class="card-body">
+                        
+                   </div>                   
+                   <div class="card-footer">
+                       <div class="col-md-12">
+                        <div class="row d-flex justify-content-end">
+                            <button class="btn btn-light text-nowrap"  data-toggle="modal" data-target="#largeModal-5">See More <i class="icofont icofont-stylish-right"></i></button>
+                        </div>
+                       </div>
+                  </div>    
+           </div>
+           <div class="col-md-3 card shadow project-6">
+            <div class="card-header">
+                <h5>Application</h5>
+                <h6>Ionic</h6>
+                <p>Need Labour</p>
+               </div>
+               <div class="card-body">
+                    
+               </div>                   
+               <div class="card-footer">
+                   <div class="col-md-12">
+                    <div class="row d-flex justify-content-end">
+                        <button class="btn btn-light text-nowrap"  data-toggle="modal" data-target="#largeModal-6">See More <i class="icofont icofont-stylish-right"></i></button>
+                    </div>
+                   </div>
+              </div>    
+           
+        </div>
+
+        
+    </div>
+  </div>
+</div>
+
+<!-- Popup-->
+     <!--Online shop-->
+<div class="modal fade" id="largeModal-1" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="col-md-12">
+              <div class="row justify-content-around">
+
+                <h4 class="modal-title" id="myModalLabel">Online Shoping</h4>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+              </div>             
+          </div>
+          
+        </div>
+        <div class="modal-body">
+         <div class="container-fluid">
+            <div class="col-md-12">
+                <div class="row justify-content-around">
+                    <div class="responsive">
+                        <div class="gallery">
+                          <a target="_blank" href="../../../assets/images/online-shop-1.png">
+                            <img src="../../../assets/images/online-shop-1.png" alt="Cinque Terre" width="600" height="400">
+                          </a>
+                          <div class="desc">My sample dashboard</div>
+                        </div>
+                      </div>
+                      
+                      <div class="responsive">
+                        <div class="gallery">
+                          <a target="_blank" href="../../../assets/images/online-shop-3.png">
+                            <img src="../../../assets/images/online-shop-3.png" alt="Northern Lights" width="600" height="400">
+                          </a>
+                          <div class="desc">Online Shop UI </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+         </div>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+
+      <!--qc wing-->
+      <div class="modal fade" id="largeModal-2" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="col-md-12">
+                  <div class="row justify-content-around">
+    
+                    <h4 class="modal-title" id="myModalLabel">QC Wing</h4>
+    
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>             
+              </div>
+              
+            </div>
+            <!-- body -->
+            <div class="modal-body">
+
+             <div class="container-fluid">
+                <div class="col-md-12">
+                    <div class="row justify-content-around">
+                        <div class="responsive mt-2">
+                            <div class="gallery">
+                              <a target="_blank" href="../../../assets/images/qcwing-2.png">
+                                <img src="../../../assets/images/qcwing-2.png" alt="Cinque Terre" width="600" height="400">
+                              </a>
+                              <div class="desc">Qc Wing dashboard</div>
+                            </div>
+                          </div>
+                          
+                          <div class="responsive mt-2">
+                            <div class="gallery">
+                              <a target="_blank" href="../../../assets/images/qcwing (1).png">
+                                <img src="../../../assets/images/qcwing (1).png" alt="Northern Lights" width="600" height="400">
+                              </a>
+                              <div class="desc">Data Edit & delete</div>
+                            </div>
+                          </div>
+                          <div class="responsive mt-2">
+                            <div class="gallery">
+                              <a target="_blank" href="../../../assets/images/qcwing (2).png">
+                                <img src="../../../assets/images/qcwing (2).png" alt="Northern Lights" width="600" height="400">
+                              </a>
+                              <div class="desc">Total Data Calculation filter</div>
+                            </div>
+                          </div>
+                          <div class="responsive mt-2">
+                            <div class="gallery">
+                              <a target="_blank" href="../../../assets/images/qcwing (3).png">
+                                <img src="../../../assets/images/qcwing (3).png" alt="Northern Lights" width="600" height="400">
+                              </a>
+                              <div class="desc">Add New Data</div>
+                            </div>
+                          </div>
+                          <div class="responsive mt-2">
+                            <div class="gallery">
+                              <a target="_blank" href="../../../assets/images/qcwing (4).png">
+                                <img src="../../../assets/images/qcwing (4).png" alt="Northern Lights" width="600" height="400">
+                              </a>
+                              <div class="desc">Loop Data Add</div>
+                            </div>
+                          </div>
+                          <div class="responsive mt-2">
+                            <div class="gallery">
+                              <a target="_blank" href="../../../assets/images/qcwing (6).png">
+                                <img src="../../../assets/images/qcwing (6).png" alt="Northern Lights" width="600" height="400">
+                              </a>
+                              <div class="desc">Monthly EMI Calculation</div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+             </div>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+
+        <!-- resume -->
+        <div class="modal fade" id="largeModal-3" tabindex="-1" role="dialog" aria-labelledby="basicModa" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <div class="col-md-12">
+                      <div class="row justify-content-around">
+        
+                        <h4 class="modal-title" id="myModalLabel">My Resume</h4>
+        
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>             
+                  </div>
+                  
+                </div>
+                <!-- body -->
+                <div class="modal-body">
+    
+                 <div class="container-fluid">
+                    <div class="col-md-12">
+                        <div class="row justify-content-around">
+                            <div class="responsive mt-2">
+                                <div class="gallery">
+                                  <a target="_blank" href="../../../assets/images/resume (4).png">
+                                    <img src="../../../assets/images/resume (4).png" alt="Cinque Terre" width="600" height="400">
+                                  </a>
+                                  <div class="desc">Resume View</div>
+                                </div>
+                              </div>
+                              
+                              <div class="responsive mt-2">
+                                <div class="gallery">
+                                  <a target="_blank" href="../../../assets/images/resume (2).png">
+                                    <img src="../../../assets/images/resume (2).png" alt="Northern Lights" width="600" height="400">
+                                  </a>
+                                  <div class="desc">About View</div>
+                                </div>
+                              </div>
+                              <div class="responsive mt-2">
+                                <div class="gallery">
+                                  <a target="_blank" href="../../../assets/images/resume (3).png">
+                                    <img src="../../../assets/images/resume (3).png" alt="Northern Lights" width="600" height="400">
+                                  </a>
+                                  <div class="desc">Form View</div>
+                                </div>
+                              </div>
+                              <div class="responsive mt-2">
+                                <div class="gallery">
+                                  <a target="_blank" href="../../../assets/images/resume (1).png">
+                                    <img src="../../../assets/images/resume (1).png" alt="Northern Lights" width="600" height="400">
+                                  </a>
+                                  <div class="desc">Mobiloe Responsive</div>
+                                </div>
+                              </div>
+                              <div class="responsive mt-2">
+                                <div class="gallery">
+                                  <a target="_blank" href="../../../assets/images/resume (5).png">
+                                    <img src="../../../assets/images/resume (5).png" alt="Northern Lights" width="600" height="400">
+                                  </a>
+                                  <div class="desc">Intro Responsive</div>
+                                </div>
+                              </div>
+                              <div class="responsive mt-2">
+                                <div class="gallery">
+                                  <a target="_blank" href="../../../assets/images/resume (6).png">
+                                    <img src="../../../assets/images/resume (6).png" alt="Northern Lights" width="600" height="400">
+                                  </a>
+                                  <div class="desc">Form Responsive</div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                 </div>
+                </div>
+              
+              </div>
+            </div>
+          </div>
+
+          <!--Puthiya pathai-->
+          <div class="modal fade" id="largeModal-4" tabindex="-1" role="dialog" aria-labelledby="basicModa" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <div class="col-md-12">
+                      <div class="row justify-content-around">
+        
+                        <h4 class="modal-title" id="myModalLabel">Puthiya Pathai</h4>
+        
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>             
+                  </div>
+                  
+                </div>
+                <!-- body -->
+                <div class="modal-body">
+    
+                 <div class="container-fluid">
+                    <div class="col-md-12">
+                        <div class="row justify-content-around">
+                            <div class="responsive mt-2">
+                                <div class="gallery">
+                                  <a target="_blank" href="../../../assets/images/022.jpeg">
+                                    <img src="../../../assets/images/022.jpeg" alt="Cinque Terre">
+                                  </a>
+                                  <div class="desc">Services Status</div>
+                                </div>
+                              </div>
+                              
+                              <div class="responsive mt-2">
+                                <div class="gallery">
+                                  <a target="_blank" href="../../../assets/images/023.jpeg">
+                                    <img src="../../../assets/images/023.jpeg" alt="Northern Lights">
+                                  </a>
+                                  <div class="desc">Price</div>
+                                </div>
+                              </div>
+                              <div class="responsive mt-2">
+                                <div class="gallery">
+                                  <a target="_blank" href="../../../assets/images/024.jpeg">
+                                    <img src="../../../assets/images/024.jpeg" alt="Northern Lights">
+                                  </a>
+                                  <div class="desc">Booking Order</div>
+                                </div>
+                              </div>
+                              <div class="responsive mt-2">
+                                <div class="gallery">
+                                  <a target="_blank" href="../../../assets/images/025.jpeg">
+                                    <img src="../../../assets/images/025.jpeg" alt="Northern Lights">
+                                  </a>
+                                  <div class="desc">Payment Section</div>
+                                </div>
+                              </div>
+                             
+                              <div class="responsive mt-2">
+                                <div class="gallery">
+                                  <a target="_blank" href="../../../assets/images/026.jpeg">
+                                    <img src="../../../assets/images/026.jpeg" alt="Northern Lights">
+                                  </a>
+                                  <div class="desc">Booking Details</div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                 </div>
+                </div>
+              
+              </div>
+            </div>
+          </div>
+
+
+          <!--Ayur Yogems-->
+          <div class="modal fade" id="largeModal-5" tabindex="-1" role="dialog" aria-labelledby="basicModa" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <div class="col-md-12">
+                      <div class="row justify-content-around">
+        
+                        <h4 class="modal-title" id="myModalLabel">Ayuryogems</h4>
+        
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>             
+                  </div>
+                  
+                </div>
+                <!-- body -->
+                <div class="modal-body">
+    
+                 <div class="container-fluid">
+                    <div class="col-md-12">
+                        <div class="row justify-content-around">
+                            <div class="responsive mt-2">
+                                <div class="gallery">
+                                  <a target="_blank" href="../../../assets/images/1 (1).png">
+                                    <img src="../../../assets/images/1 (1).png" alt="Cinque Terre">
+                                  </a>
+                                  <div class="desc">Admin Add Section</div>
+                                </div>
+                              </div>
+                              
+                              <div class="responsive mt-2">
+                                <div class="gallery">
+                                  <a target="_blank" href="../../../assets/images/2 (1).png">
+                                    <img src="../../../assets/images/2 (1).png" alt="Northern Lights">
+                                  </a>
+                                  <div class="desc">Admin Edit Delete</div>
+                                </div>
+                              </div>
+                              <div class="responsive mt-2">
+                                <div class="gallery">
+                                  <a target="_blank" href="../../../assets/images/10.jpeg">
+                                    <img src="../../../assets/images/10.jpeg" alt="Northern Lights">
+                                  </a>
+                                  <div class="desc">API Input</div>
+                                </div>
+                              </div>
+                              <div class="responsive mt-2">
+                                <div class="gallery">
+                                  <a target="_blank" href="../../../assets/images/8.jpeg">
+                                    <img src="../../../assets/images/8.jpeg" alt="Northern Lights">
+                                  </a>
+                                  <div class="desc">List API</div>
+                                </div>
+                              </div>
+                             
+                              <div class="responsive mt-2">
+                                <div class="gallery">
+                                  <a target="_blank" href="../../../assets/images/11.jpeg">
+                                    <img src="../../../assets/images/11.jpeg" alt="Northern Lights">
+                                  </a>
+                                  <div class="desc">API for Application</div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                 </div>
+                </div>
+              
+              </div>
+            </div>
+          </div>
+
+           <!--Need Labour-->
+           <div class="modal fade" id="largeModal-6" tabindex="-1" role="dialog" aria-labelledby="basicModa" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <div class="col-md-12">
+                      <div class="row justify-content-around">
+        
+                        <h4 class="modal-title" id="myModalLabel">Need Labour</h4>
+        
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>             
+                  </div>
+                  
+                </div>
+                <!-- body -->
+                <div class="modal-body">
+    
+                 <div class="container-fluid">
+                    <div class="col-md-12">
+                        <div class="row justify-content-around">
+                            <div class="responsive mt-2">
+                                <div class="gallery">
+                                  <a target="_blank" href="../../../assets/images/012.jpeg">
+                                    <img src="../../../assets/images/012.jpeg" alt="Cinque Terre">
+                                  </a>
+                                  <div class="desc">Home Services</div>
+                                </div>
+                              </div>
+                              
+                              <div class="responsive mt-2">
+                                <div class="gallery">
+                                  <a target="_blank" href="../../../assets/images/011.jpeg">
+                                    <img src="../../../assets/images/011.jpeg" alt="Northern Lights">
+                                  </a>
+                                  <div class="desc">Login Page</div>
+                                </div>
+                              </div>
+                              <div class="responsive mt-2">
+                                <div class="gallery">
+                                  <a target="_blank" href="../../../assets/images/013.jpeg">
+                                    <img src="../../../assets/images/013.jpeg" alt="Northern Lights">
+                                  </a>
+                                  <div class="desc">Create New</div>
+                                </div>
+                              </div>
+                              <div class="responsive mt-2">
+                                <div class="gallery">
+                                  <a target="_blank" href="../../../assets/images/014.jpeg">
+                                    <img src="../../../assets/images/014.jpeg" alt="Northern Lights">
+                                  </a>
+                                  <div class="desc">OTP Verification</div>
+                                </div>
+                              </div>
+                             
+                              <div class="responsive mt-2">
+                                <div class="gallery">
+                                  <a target="_blank" href="../../../assets/images/015.jpeg">
+                                    <img src="../../../assets/images/015.jpeg" alt="Northern Lights">
+                                  </a>
+                                  <div class="desc">Popup</div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                 </div>
+                </div>
+              
+              </div>
+            </div>
+          </div>
+
+<!--contect info-->
+
+<div class="container mt-2">
+    <div class="col-md-12 contect">
+        <div class="row d-flex justify-content-center">
+            <h3>Get In Touch</h3>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-6 mb-2">
+                <div class="row d-flex justify-content-center">
+                    <img src="../../../assets/images/contect.png" width="230" height="230" alt="">
+                </div>
+            </div>
+            <div class="col-md-6 ">
+                <form>
+                    <div class="row mt-2">
+                      <div class="col">
+                        <input type="text" class="form-control" placeholder="Name">
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" placeholder="Contect Number">
+                      </div>
+                    </div>                  
+                    <div class="mt-2">
+                        <input type="text" class="form-control" placeholder="Mail ID">
+                    </div>
+                    <div class="mt-2 mb-2">
+                        <textarea type="text" class="form-control" placeholder="Message.."></textarea>
+                    </div>
+                    <div class="row d-flex justify-content-center ">
+                        <button class="btn sub">Submit</button>
+                    </div>
+                     
+                  </form>
+            </div>
+        </div>
+        <div class="col-md-12 contect-det">
+            <div class="row d-flex justify-content-around">
+                <div class="col-sm-3">
+                    <div class="row d-flex justify-content-center">                        
+                        <div class="col-sm-12">
+                            <a class="btn" data-toggle="tooltip"  data-placement="top" title="Click to Call" href="tel:+91 8778136294"><h4><i class="icofont icofont-whatsapp"></i>+91 8778136294</h4></a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 ">
+                    <div class="row d-flex justify-content-center">                       
+                        <div class="col-sm-12">
+                            <a class="btn" data-toggle="tooltip"  data-placement="top" title="Open Mail" target="_blank" href="mailto:sivaranjith87791@gmail.com"><h4><i class="icofont icofont-ui-message"></i>sivaranjith87791@gmail.com</h4></a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 ">
+                    <div class="row">                        
+                        <div class="col-sm-12">
+                            <a class="btn" data-toggle="tooltip"  data-placement="top" title="Open Map" target="_blank" href="https://www.google.co.in/maps/place/Suchindram+Akkarai,+Suchindram,+Tamil+Nadu+629704/@8.1559374,77.4663493,17z/data=!3m1!4b1!4m13!1m7!3m6!1s0x3b04f180561d0db3:0x3cefa0a9a8714a3e!2sThanumalayan+Nagar,+Suchindram,+Tamil+Nadu+629704!3b1!8m2!3d8.1538501!4d77.4678668!3m4!1s0x3b04f22aaf2e939d:0x2d61502b8c65560f!8m2!3d8.1559164!4d77.4705718?hl=en-GB"><h4><i class="icofont icofont-ui-map"></i>Kanniyakumari</h4></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--responsive-->
+        <div class="col-md-12 contect-det-res">
+            <div class="row d-flex justify-content-around">
+                <div class="col-sm-3">
+                    <div class="row d-flex justify-content-center">                        
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-4 text-center">                   
+                                      <i class="icofont icofont-whatsapp"></i>      
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="row justify-content-start">
+                                        <a class="btn" href="tel:+91 8778136294"><h4>+91 8778136294</h4></a>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 ">
+                    <div class="row d-flex justify-content-center">                       
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-4 text-center">
+                                    <i class="icofont icofont-ui-message"></i>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="row justify-content-start">
+                                        <a class="btn" target="_blank" href="mailto:sivaranjith87791@gmail.com"> <h4>sivaranjith87791@gmail.com</h4></a>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 ">
+                    <div class="row">                        
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-4 text-center">
+                                    <i class="icofont icofont-ui-map"></i>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="row justify-content-start">
+                                        <a class="btn" target="_blank" href="https://www.google.co.in/maps/place/Suchindram+Akkarai,+Suchindram,+Tamil+Nadu+629704/@8.1559374,77.4663493,17z/data=!3m1!4b1!4m13!1m7!3m6!1s0x3b04f180561d0db3:0x3cefa0a9a8714a3e!2sThanumalayan+Nagar,+Suchindram,+Tamil+Nadu+629704!3b1!8m2!3d8.1538501!4d77.4678668!3m4!1s0x3b04f22aaf2e939d:0x2d61502b8c65560f!8m2!3d8.1559164!4d77.4705718?hl=en-GB">   <h4>Kanniyakumari</h4></a>
+                                    </div>                                    
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Footer-->
+<footer class="mt-2">
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="row d-flex justify-content-center pt-2">
+                <img src="../../../assets/images/logo-res.png" width="100" height="90" alt="">
+            </div>
+            <div class="col-lg-10 mx-auto tech-img">
+                <div class="row d-flex justify-content-center">
+                    <h3>Tech Familiar</h3>
+                </div>
+                <div class="row mt-1">
+                    <div class="col-sm-2 text-center">
+                       <a class="btn" href="https://angular.io/" target="_blank"><p>Angular</p></a> 
+                    </div>
+                    <div class="col-sm-2 text-center">
+                        <a class="btn" href="https://ionicframework.com/" target="_blank">  <p>IONIC</p></a>
+                    </div>
+                    <div class="col-sm-2 text-center">
+                        <a class="btn" href="https://flask.palletsprojects.com/en/2.1.x/"><p>Flask</p></a>
+                    </div>
+                    <div class="col-sm-2 text-center">
+                        <a class="btn" href="https://laravel.com/" target="_blank"><p>Laravel</p></a>
+                    </div>
+                    <div class="col-sm-2 text-center">
+                        <a class="btn" href="https://www.python.org/" target="_blank"> <p>Python</p></a>
+                    </div>
+                    <div class="col-sm-2 text-center">
+                        <a class="btn" href="https://www.php.net/" target="_blank"> <p>PHP</p></a>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-sm-2 text-center">
+                        <a class="btn" href="">  <p>HTML</p></a>
+                    </div>
+                    <div class="col-sm-2 text-center">
+                        <a class="btn" href=""> <p>CSS</p></a>
+                    </div>
+                    <div class="col-sm-2 text-center">
+                        <a class="btn" href=""> <p>JS</p></a>
+                    </div>
+                    <div class="col-sm-2 text-center">
+                        <a class="btn" href="https://jquery.com/" target="_blank">  <p>JQUARY</p></a>
+                    </div>
+                    <div class="col-sm-2 text-center">
+                        <a class="btn" href="https://www.mysql.com/" target="_blank">  <p>MySQL</p></a>
+                    </div>
+                    <div class="col-sm-2 text-center">
+                        <a class="btn" href=""> <p>MongoDB</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="row d-flex justify-content-center">
+                    <h4>sivaranjith87791@gmail.com</h4>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="row justify-content-center copy">
+                    <p>© 2022@developed by sivaranjith s </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- fab button-->
+<div class="floating-container">
+    <div class="floating-button"><i class='bx bxs-share-alt'></i></div>
+    <div class="element-container">        
+      <a href="https://m.facebook.com/100004215310950/"> <span class="float-element tooltip-left">
+        <i class='bx bxl-meta'></i>
+      </span>
+    </a>
+    <!-- <a href="https://twitter.com/cva_ranjith"> </a>   -->
+    <span class="float-element">
+       <i class='bx bxl-instagram-alt'></i>
+      </span>
+   
+      <!-- <a href="https://www.instagram.com/b_a_d_kin_g/channel/"> </a> -->
+        <span class="float-element">
+            <i class='bx bxs-downvote'></i>
+      </span>
+      
+    </div>
+</div>
