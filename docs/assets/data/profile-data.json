@@ -1,0 +1,764 @@
+{
+  "about": {
+    "name": "Sivaranjith S",
+    "profileImage": "assets/images/profile.jpg",
+    "bannerImg1": "assets/images/banner-img-1.jpg",
+    "bannerImg2": "assets/images/banner-img-4.jpg",
+    "bannerImg3": "assets/images/banner-img-5.jpg",
+    "title": "Software Engineer",
+    "phone": "+91 8778136294",
+    "email": "sivaranjith87791@gmail.com",
+    "dob": "30-03-1999",
+    "address": "7/4c8 Azathnager, Suchindrum, Kanniyakumari",
+    "city": "Nagercoil",
+    "residency": "India",
+    "age": "27",
+    "bio": "Full Stack Developer with 4+ years of experience in designing, developing, and deploying scalable web and mobile applications. Skilled in React, Angular, Laravel, Node.js, MySQL, PostgreSQL, and AWS, with hands-on experience building ERP systems, eCommerce platforms, and learning management solutions. Passionate about creating efficient, user-friendly applications and continuously learning new technologies to deliver high-quality software solutions.",
+    "yearsOfExperience": "4",
+    "resumeUrl": "assets/images/SIVARANJITH.pdf"
+  },
+  "objective": {
+    "title": "Professional Objective",
+    "description": "To contribute my expertise in Full Stack Development, cloud technologies, and scalable application architecture to a forward-thinking organization, while continuously enhancing my technical skills and delivering innovative solutions that drive business growth."
+  },
+  "hobbies": [
+    {
+      "id": 1,
+      "name": "Travel",
+      "icon": "fas fa-plane"
+    },
+    {
+      "id": 2,
+      "name": "Drive",
+      "icon": "fas fa-car"
+    },
+    {
+      "id": 3,
+      "name": "Music",
+      "icon": "fas fa-award"
+    }
+  ],
+  "expertise": [
+    {
+      "id": 1,
+      "title": "Web Application ",
+      "description": "I design and develop responsive, scalable, and user-friendly web applications that deliver seamless digital experiences. From frontend interfaces to backend systems and database management, I build complete solutions that are secure, efficient, and optimized for performance."
+    },
+    {
+      "id": 2,
+      "title": "Mobile Application ",
+      "description": "I develop robust and scalable mobile applications that solve real-world business challenges. From planning and architecture to development, testing, and deployment, I focus on delivering secure, high-performance solutions that provide an excellent user experience."
+    },
+    {
+      "id": 3,
+      "title": "Full Stack ",
+      "description": "Full Stack Development involves building complete web applications from frontend to backend.I develop responsive user interfaces, secure APIs, and efficient database systems. My focus is on creating scalable, high-performance solutions that deliver excellent user experiences."
+    }
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "position": "Software Engineer",
+      "company": "Sellxo Emporium",
+      "location": "Marthandam",
+      "duration": "2024 to Currently working",
+      "technologies": ["React", "Express JS", "PostgreSQL", "AWS"]
+    },
+    {
+      "id": 2,
+      "position": "Software Engineer",
+      "company": "Edgar Interactive",
+      "location": "Bangalore",
+      "duration": "2022 to 2024",
+      "technologies": ["IONIC", "Angular", "Laravel", "MySQL"]
+    },
+    {
+      "id": 3,
+      "position": "junior Software Engineer",
+      "company": "Feather Softwares",
+      "location": "Nagercoil",
+      "duration": "2021-2022",
+      "technologies": ["Laravel", "IONIC", "Angular"]
+    },
+    {
+      "id": 4,
+      "position": "Internship",
+      "company": "DayPay",
+      "location": "Nagercoil",
+      "duration": "2020-2021",
+      "technologies": ["Python", "PHP", "Angular"]
+    }
+  ],
+  "projects":[
+    {
+      "id": 1,
+      "name": "Start Goals",
+      "platform": "Online Education Platform",
+      "description": {
+        "dis1": "Developed a full-stack online learning platform with support for live classes via web and mobile applications",
+        "dis2": "Built and integrated RESTful APIs to enable real-time communication and seamless data flow",
+        "dis3": "Managed both admin panel and dynamic user interfaces across frontend and backend systems",
+        "dis4": "Deployed and maintained the application on AWS, ensuring performance, scalability, and uptime"
+      },
+      "technologies": ["Vue.js", "Node.js", "Express JS", "PostgreSQL", "AWS"],
+      "url":"https://startgoals.in/"
+    },
+     {
+      "id": 2,
+      "name": "Edgar Interactive",
+        "platform": "MI-ERP Billing and Inventory Management System",
+      "description": {
+        "dis1": "Developed a mobile-based ERP system for billing, stock management, and delivery tracking",
+        "dis2": "Implemented features for inventory control, GST billing, and order processing",
+         "dis3": "Handled frontend development using Ionic 6 and supported backend development using Laravel and MySQL",
+        "dis4": "Improved operational efficiency through streamlined billing and stock management processes"
+      },
+      "technologies": ["IONIC 6", "Capacitor", "Angular", "Laravel", "MySQL"],
+        "url":"https://www.edgarinteractive.com/"
+    },
+    {
+      "id": 3,
+      "name": "Puthiya Pathai",
+        "platform": "Care Taking Service Application",
+      "description": {
+        "dis1": "Assisted in developing and maintaining mobile application features using Ionic and backend services using Laravel.",
+        "dis2": "Implemented REST API integrations and database operations to support caregiver and customer management workflows.",
+        "dis3": "Collaborated with cross-functional teams to ensure seamless user experience and efficient application performance."
+      },
+      "technologies": ["IONIC", "Angular", "Laravel", "MySQL"],
+        "url":"https://puthiyapathaihomecare.com/"
+    },
+    {
+      "id": 4,
+      "name": "Ayuryogems",
+      "platform": "Admin and API for Ayurvedic Product Management",
+      "description": {
+        "dis1": "Developed and maintained dynamic REST APIs for managing Ayurvedic products, categories, and inventory data.",
+        "dis2": "Designed and implemented database schemas to support efficient data storage and retrieval.",
+        "dis3": "Collaborated with frontend developers to ensure seamless integration of APIs with user interfaces and optimized performance for a responsive user experience."
+      },
+      "technologies": ["Laravel", "MySQL"],
+      "url": "https://ayurmedicine.in/"
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "degree": "Mechanical Engineer",
+      "qualification": "BE",
+      "percentage": "71%",
+      "institution": "Rohini College of Engg & Tech",
+      "duration": "2017-2020"
+    },
+    {
+      "id": 2,
+      "degree": "Mechanical Diploma",
+      "qualification": "Diploma",
+      "percentage": "87%",
+      "institution": "Sun Institute of Polytechnic",
+      "duration": "2014-2017"
+    },
+    {
+      "id": 3,
+      "degree": "State Board",
+      "qualification": "SSLC",
+      "percentage": "65%",
+      "institution": "Carmel Higher Secondary School",
+      "duration": "2013-2014"
+    }
+  ],
+  "statistics": [
+    {
+      "id": 1,
+      "number": "4+",
+      "label": "Years Experience",
+      "icon": "fas fa-briefcase",
+      "options":[
+        { "label": "Full Time" },
+        { "label": "Remote" }
+      ]
+    },
+    {
+      "id": 2,
+      "number": "19+",
+      "label": "Completed Projects",
+      "icon": "fas fa-diagram-project",
+      "options":[
+        { "label": "Delivered" },
+        { "label": "Live Demos" }
+      ]
+    },
+    {
+      "id": 3,
+      "number": "10+",
+      "label": "Honors & Awards",
+      "icon": "fas fa-award",
+      "options":[
+        { "label": "Company Awards" },
+        { "label": "Hackathon Wins" }
+      ]
+    },{
+        "id": 4,
+        "number": "100%",
+        "label": "Client Satisfaction",
+        "icon": "fas fa-thumbs-up",
+        "options":[
+          { "label": "Positive Feedback" },
+          { "label": "Repeat Clients" }
+        ]
+    }
+  ],
+  "skills": [
+    {
+      "id": 1,
+      "name": "Angular",
+      "proficiency": 70
+      ,"icon": "fab fa-angular"
+    },
+    {
+      "id": 2,
+      "name": "IONIC",
+      "proficiency": 65
+      ,"icon": "fas fa-mobile-alt"
+    },
+    {
+      "id": 3,
+      "name": "React JS",
+      "proficiency": 70
+      ,"icon": "fab fa-react"
+    },
+    {
+      "id": 4,
+      "name": "Laravel",
+      "proficiency": 80
+      ,"icon": "fab fa-laravel"
+    },
+    {
+      "id": 5,
+      "name": "Python",
+      "proficiency": 60
+      ,"icon": "fab fa-python"
+    },
+    {
+      "id": 6,
+      "name": "PHP",
+      "proficiency": 75
+      ,"icon": "fab fa-php"
+    },
+    {
+      "id": 7,
+      "name": "HTML",
+      "proficiency": 95
+      ,"icon": "fab fa-html5"
+    },
+    {
+      "id": 8,
+      "name": "CSS",
+      "proficiency": 90
+      ,"icon": "fab fa-css3-alt"
+    },
+    {
+      "id": 9,
+      "name": "JS",
+      "proficiency": 85
+      ,"icon": "fab fa-js"
+    },
+    {
+      "id": 10,
+      "name": "JQUERY",
+      "proficiency": 75
+      ,"icon": "fab fa-js"
+    },
+    {
+      "id": 11,
+      "name": "MySQL",
+      "proficiency": 80
+      ,"icon": "fas fa-database"
+    },
+    {
+      "id": 12,
+      "name": "postgreSQL",
+      "proficiency": 75
+      ,"icon": "fas fa-database"
+    },
+     {
+        "id": 13,
+        "name": "Express JS",
+        "proficiency": 80
+        ,"icon": "fab fa-node-js"
+    }
+    ,{
+        "id": 14,
+        "name": "AWS",
+        "proficiency": 75
+        ,"icon": "fab fa-aws"
+    }
+   
+  ],
+  
+  "technologies": [
+    {
+      "id": 1,
+      "name": "Angular",
+      "url": "https://angular.io/"
+    },
+    {
+      "id": 2,
+      "name": "IONIC",
+      "url": "https://ionicframework.com/"
+    },
+    {
+      "id": 3,
+      "name": "Flask",
+      "url": "https://flask.palletsprojects.com/"
+    },
+    {
+      "id": 4,
+      "name": "Laravel",
+      "url": "https://laravel.com/"
+    },
+    {
+      "id": 5,
+      "name": "Python",
+      "url": "https://www.python.org/"
+    },
+    {
+      "id": 6,
+      "name": "PHP",
+      "url": "https://www.php.net/"
+    },
+    {
+      "id": 7,
+      "name": "HTML",
+      "url": ""
+    },
+    {
+      "id": 8,
+      "name": "CSS",
+      "url": ""
+    },
+    {
+      "id": 9,
+      "name": "JS",
+      "url": ""
+    },
+    {
+      "id": 10,
+      "name": "JQUERY",
+      "url": "https://jquery.com/"
+    },
+    {
+      "id": 11,
+      "name": "MySQL",
+      "url": "https://www.mysql.com/"
+    },
+    {
+      "id": 12,
+      "name": "MongoDB",
+      "url": ""
+    }
+  ],
+
+  "portfolio": [
+    {
+      "id": 1,
+      "category": "Web Application",
+      "tech": "Angular",
+      "name": "Online Shop",
+      "thumbnail": "assets/images/online-shop.png",
+      "modalId": "largeModal-1",
+      "modalTitle": "Testing Dashboard",
+      "description": "An online shopping platform built with Angular, featuring a user-friendly interface, product catalog, shopping cart, and secure checkout process. The application is designed to provide a seamless shopping experience for users while ensuring efficient performance and scalability.",
+      "modalImages": [
+        {
+          "src": "assets/images/online-shop-1.png",
+          "alt": "Online Shop Dashboard",
+          "desc": "My sample dashboard"
+        },
+        {
+          "src": "assets/images/online-shop-3.png",
+          "alt": "Online Shop UI",
+          "desc": "Online Shop UI"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "category": "Web Application",
+      "tech": "Core PHP",
+      "name": "Qc Wing",
+      "thumbnail": "assets/images/qcwing.png",
+      "modalId": "largeModal-2",
+      "modalTitle": "Gold Loan Management System",
+      "description": "A web application for managing gold loans, featuring a user-friendly interface, loan calculation tools, and secure data management.",
+      "modalImages": [
+        {
+          "src": "assets/images/qcwing-2.png",
+          "alt": "QC Wing Dashboard",
+          "desc": "Qc Wing dashboard"
+        },
+        {
+          "src": "assets/images/qcwing (1).png",
+          "alt": "QC Edit/Delete",
+          "desc": "Data Edit & delete"
+        },
+        {
+          "src": "assets/images/qcwing (2).png",
+          "alt": "QC Filter",
+          "desc": "Total Data Calculation filter"
+        },
+        {
+          "src": "assets/images/qcwing (3).png",
+          "alt": "QC Add Data",
+          "desc": "Add New Data"
+        },
+        {
+          "src": "assets/images/qcwing (4).png",
+          "alt": "Loop Data",
+          "desc": "Loop Data Add"
+        },
+        {
+          "src": "assets/images/qcwing (6).png",
+          "alt": "EMI Calculation",
+          "desc": "Monthly EMI Calculation"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "category": "Web Application",
+      "tech": "Angular",
+      "name": "Resume",
+      "thumbnail": "assets/images/resume.jpg",
+      "modalId": "largeModal-3",
+      "modalTitle": "Portfolio Resume",
+      "description": "A portfolio resume built with Angular, featuring a modern design, responsive layout, and easy navigation.",
+      "modalImages": [
+        {
+          "src": "assets/images/resume (4).png",
+          "alt": "Resume View",
+          "desc": "Resume View"
+        },
+        {
+          "src": "assets/images/resume (2).png",
+          "alt": "About View",
+          "desc": "About View"
+        },
+        {
+          "src": "assets/images/resume (3).png",
+          "alt": "Form View",
+          "desc": "Form View"
+        },
+        {
+          "src": "assets/images/resume (1).png",
+          "alt": "Mobile Responsive",
+          "desc": "Mobile Responsive"
+        },
+        {
+          "src": "assets/images/resume (5).png",
+          "alt": "Intro Responsive",
+          "desc": "Intro Responsive"
+        },
+        {
+          "src": "assets/images/resume (6).png",
+          "alt": "Form Responsive",
+          "desc": "Form Responsive"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "category": "Application",
+      "tech": "Ionic",
+      "name": "Puthiya Pathai",
+      "thumbnail": "assets/images/pu.png",
+      "modalId": "largeModal-4",
+      "modalTitle": "Care Taking Service Application",
+      "description": "A mobile application for managing care taking services, featuring a user-friendly interface, service booking, and secure data management.",
+      "modalImages": [
+        {
+          "src": "assets/images/022.jpeg",
+          "alt": "Services Status",
+          "desc": "Services Status"
+        },
+        {
+          "src": "assets/images/023.jpeg",
+          "alt": "Price",
+          "desc": "Price"
+        },
+        {
+          "src": "assets/images/024.jpeg",
+          "alt": "Booking Order",
+          "desc": "Booking Order"
+        },
+        {
+          "src": "assets/images/025.jpeg",
+          "alt": "Payment Section",
+          "desc": "Payment Section"
+        },
+        {
+          "src": "assets/images/026.jpeg",
+          "alt": "Booking Details",
+          "desc": "Booking Details"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "category": "Web Application",
+      "tech": "Laravel",
+      "name": "Ayuryogems",
+      "thumbnail": "assets/images/anj.png",
+      "modalId": "largeModal-5",
+      "modalTitle": "Admin and API for Ayurvedic Product Management",
+      "description": "A web application for managing Ayurvedic products, featuring a user-friendly interface, product catalog management, and secure data handling.",
+      "modalImages": [
+        {
+          "src": "assets/images/1 (1).png",
+          "alt": "Admin Add Section",
+          "desc": "Admin Add Section"
+        },
+        {
+          "src": "assets/images/2 (1).png",
+          "alt": "Admin Edit Delete",
+          "desc": "Admin Edit Delete"
+        },
+        {
+          "src": "assets/images/10.jpeg",
+          "alt": "API Input",
+          "desc": "API Input"
+        },
+        {
+          "src": "assets/images/8.jpeg",
+          "alt": "List API",
+          "desc": "List API"
+        },
+        {
+          "src": "assets/images/11.jpeg",
+          "alt": "Application API",
+          "desc": "API for Application"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "category": "Application",
+      "tech": "Ionic",
+      "name": "Need Labour",
+      "thumbnail": "assets/images/nl.png",
+      "modalId": "largeModal-6",
+      "modalTitle": "Labour Service Application",
+      "description": "A mobile application for managing labour services, featuring a user-friendly interface, service booking, and secure data management.",
+      "modalImages": [
+        {
+          "src": "assets/images/012.jpeg",
+          "alt": "Home Services",
+          "desc": "Home Services"
+        },
+        {
+          "src": "assets/images/011.jpeg",
+          "alt": "Login Page",
+          "desc": "Login Page"
+        },
+        {
+          "src": "assets/images/013.jpeg",
+          "alt": "Create New",
+          "desc": "Create New"
+        },
+        {
+          "src": "assets/images/014.jpeg",
+          "alt": "OTP Verification",
+          "desc": "OTP Verification"
+        },
+        {
+          "src": "assets/images/015.jpeg",
+          "alt": "Popup",
+          "desc": "Popup"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "category": "Application",
+      "tech": "Ionic",
+      "name": "MI-ERP Billing",
+      "thumbnail": "assets/images/mi-erp.jpg",
+      "modalId": "largeModal-7",
+      "modalTitle": "Billing and Inventory Management System",
+      "description": "A web application for managing billing and inventory, featuring a user-friendly interface, real-time tracking, and secure data management.",
+      "modalImages": [
+        {
+          "src": "assets/images/27.png",
+          "alt": "Home Billing Options",
+          "desc": "Home Billing Options"
+        },
+        {
+          "src": "assets/images/28.png",
+          "alt": "Download Billing Data",
+          "desc": "Download Billing Data"
+        },
+        {
+          "src": "assets/images/29.png",
+          "alt": "Item Add to Cart",
+          "desc": "Item Add to Cart"
+        },
+        {
+          "src": "assets/images/30.png",
+          "alt": "Select Returnable Box",
+          "desc": "Select Returnable Box"
+        },
+        {
+          "src": "assets/images/31.png",
+          "alt": "Discount Each Item",
+          "desc": "Discount Each Items"
+        },
+        {
+          "src": "assets/images/32.png",
+          "alt": "Billing Screen",
+          "desc": "Billing Screen"
+        },
+        {
+          "src": "assets/images/33.png",
+          "alt": "Select Payment Method",
+          "desc": "Select Payment Method"
+        },
+        {
+          "src": "assets/images/34.png",
+          "alt": "QR Generate PhonePay",
+          "desc": "QR Generate PhonePay"
+        },
+        {
+          "src": "assets/images/35.png",
+          "alt": "Payment Complete Status",
+          "desc": "Payment Complete Status"
+        },
+        {
+          "src": "assets/images/36.png",
+          "alt": "Bill Invoice Print",
+          "desc": "Bill Invoice Print or Share"
+        },
+        {
+          "src": "assets/images/37.png",
+          "alt": "Controls by Settings",
+          "desc": "Controlls by Settings"
+        },
+        {
+          "src": "assets/images/38.png",
+          "alt": "Reports",
+          "desc": "Reports"
+        },
+        {
+          "src": "assets/images/39.png",
+          "alt": "Stock Reports",
+          "desc": "Stock Reports"
+        },
+        {
+          "src": "assets/images/40.png",
+          "alt": "Other Advanced Services",
+          "desc": "Other Advanced Services"
+        },
+        {
+          "src": "assets/images/41.png",
+          "alt": "Client Creation",
+          "desc": "Client Creation"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "category": "Web Application",
+      "tech": "React JS, Express JS, PostgreSQL",
+      "name": "Sellxo Emporium",
+      "thumbnail": "assets/images/startgoal.jpg",
+      "modalId": "largeModal-8",
+      "modalTitle": "Start Goals - Online Education Platform",
+      "description": "A web application for providing online education services, featuring a user-friendly interface, course management, and secure data handling.",
+      "modalImages": [
+        {
+          "src": "assets/images/sg1.jpg",
+          "alt": "Live and Recorded Classes",
+          "desc": "Live and Recorded Classes"
+        },
+        {
+          "src": "assets/images/sg2.jpg",
+          "alt": "Template Selling",    
+          "desc": "Website Template Selling"
+        },
+        {
+          "src": "assets/images/sg3.jpg",
+          "alt": "how it works",
+          "desc": "How It Works"
+        },
+        {
+          "src": "assets/images/sg4.jpg",
+          "alt": "Course Enrollment",   
+          "desc": "Course Enrollment"
+        },
+        {
+          "src": "assets/images/sg5.jpg",
+          "alt": "Login and Registration",
+          "desc": "Phone Number and Google, Login and Registration" 
+        },
+        {
+          "src": "assets/images/sg7.jpg",
+          "alt": "Watch Course",
+          "desc": "Watch Live and Recorded Course"
+        },
+        {
+          "src": "assets/images/sg8.jpg",
+          "alt": "Purchase Template",
+          "desc": "Purchase Website Templates"
+        },
+        {
+          "src": "assets/images/sg9.jpg",
+          "alt": "Admin Dashboard",
+          "desc": "Admin Dashboard "  
+        },
+         {
+          "src": "assets/images/sg10.jpg",
+          "alt": "Admin Course Management",
+          "desc": "Admin Course Management"
+        },
+        {
+          "src": "assets/images/sg11.jpg",
+          "alt": "Teacher Analysis",
+          "desc": "Teacher Analysis"
+        },
+         {
+          "src": "assets/images/sg12.jpg",
+          "alt": "Teacher Login Dashboard",
+          "desc": "Teacher Login Dashboard"
+        },
+         {
+          "src": "assets/images/sg13.jpg",
+          "alt": "Teacher Course Management",
+          "desc": "Teacher Course Management"
+        },
+         {
+          "src": "assets/images/sg14.jpg",
+          "alt": "Create Course",
+          "desc": "Create Course"
+        }
+      ]
+    }
+
+  ],
+  "contact": {
+    "email": "sivaranjith87791@gmail.com",
+    "phone": "+91 8778136294",
+    "location": "Kanniyakumari",
+    "mapUrl": "https://www.google.co.in/maps/",
+    "socialLinks": {
+      "linkedin": "www.linkedin.com/in/siva-ranjith-a19575212",
+      "gitlab": "https://gitlab.com/cvafeather",
+      "github": "https://github.com/cvaranjith",
+      "instagram": "https://www.instagram.com/b_a_d_kin_g/",
+      "twitter": "https://x.com/SivaRan82067829",
+      "facebook": "https://www.facebook.com/siva.ranjith.1428"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 @developed by sivaranjith s",
+    "email": "sivaranjith87791@gmail.com"
+  }
+}
