@@ -1,0 +1,22 @@
+<nav class="app-nav" id="creativeNav">
+  <div class="container nav-inner">
+    <!-- Brand with iconic star -->
+    <a class="brand" routerLink="/" id="brandLink">CVA</a>
+
+    <!-- Toggle button: original attributes + dynamic aria + click -->
+    <button class="nav-toggle" type="button" aria-label="Toggle navigation" id="navToggleBtn" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Navigation list with Angular-ready classes -->
+    <ul class="nav-list" id="navList">
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link" data-route="home">Home</a></li>
+      <li><a routerLink="/about" routerLinkActive="active" class="nav-link" data-route="about">About</a></li>
+      <li><a routerLink="/portfolio" routerLinkActive="active" class="nav-link" data-route="portfolio">Portfolio</a></li>
+      <li><a routerLink="/resume" routerLinkActive="active" class="nav-link" data-route="resume">Resume</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active" class="nav-link" data-route="contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>

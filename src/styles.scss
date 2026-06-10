@@ -1,4 +1,17 @@
+@import 'styles/_theme.scss';
+
+/* Project global styles */
 /* You can add global styles to this file, and also import other style files */
-body {
-    background: #f4fefd;
-}
+
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: radial-gradient(circle at 10% 20%, rgba(5, 10, 25, 1) 0%, #03050b 100%);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }

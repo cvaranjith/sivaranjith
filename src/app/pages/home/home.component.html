@@ -1,0 +1,611 @@
+<div class="page home-page">
+    <app-navbar></app-navbar>
+    <canvas id="statsParticleCanvas" class="particle-canvas-stats"></canvas>
+    <main class="container">
+        <section class="hero" data-scroll-animate>
+            <div class="hero-inner">
+                <div class="hero-text">
+                    <span class="hero-tag">
+                        <i class="fas fa-code-branch"></i>
+                        {{about?.yearsOfExperience}}+ years of experience
+                    </span>
+                    <!-- dynamic name (simulated) – replace with {{ about?.name }} in angular -->
+                    <h1 id="dynamicName">{{ about?.name }}</h1>
+                    <!-- dynamic title -->
+                    <h3 id="dynamicTitle">{{ about?.title }}</h3>
+                    <!-- dynamic bio with animated typing effect later -->
+                    <p id="dynamicBio">
+                        {{ objective?.description }}
+                    </p>
+                    <div class="hero-ctas">
+                        <!-- routerLink simulation: angular compatibility (href as placeholder) -->
+                        <a routerLink="/portfolio" class="btn btn-primary" id="portfolioBtn">
+                            <i class="fas fa-layer-group"></i> View Portfolio
+                        </a>
+                        <a routerLink="/contact" class="btn btn-outline" id="contactBtn">
+                            <i class="fas fa-paper-plane"></i> Contact Me
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-image-frame">
+                        <!-- dynamic profile image (simulated) – Angular: *ngIf="about?.profileImage" [src]="about.profileImage" -->
+                        <img id="profileImg" src="{{ about?.profileImage }}" alt="Profile Avatar" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-grid mt-4">
+            <div class="container">
+                <!-- subtle caption above stats -->
+                <div class="section-caption">
+                    <i class="fas fa-chart-line"></i> metrics that matter <i class="fas fa-code"></i>
+                </div>
+
+                <!-- STATS GRID - Rendered from profile-data statistics -->
+                <div class="stats-grid mt-4">
+                    <div class="stat-card card" *ngFor="let stat of statistics" [id]="'statCard' + stat.id"
+                        #statCard
+                        (click)="onStatisticClick(stat)"
+                        (mouseenter)="onStatCardMouseEnter($event, statCard)"
+                        (mousemove)="onStatCardMouseMove($event, statCard)"
+                        (mouseleave)="onStatCardMouseLeave($event, statCard)">
+                        <div class="stat-icon">
+                            <i [class]="getStatisticIcon(stat.icon)"></i>
+                        </div>
+                        <h4>{{ stat.label }}</h4>
+                        <div class="stat-number">
+                            <span class="counter-value">0</span>
+                            <span class="stat-suffix" *ngIf="getStatisticSuffix(stat.number)">{{
+                                getStatisticSuffix(stat.number) }}</span>
+                        </div>
+                        <div class="stat-meta">
+                            <span class="stat-option" *ngFor="let option of stat.options">
+                                <i class="fas fa-check-circle"></i> {{ option.label }}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- extra creative info: floating timeline -->
+                <!-- <div style="text-align: center; margin-top: 16px; opacity: 0.7; font-size: 0.75rem;">
+    <i class="fas fa-charging-station"></i> live counters | hover to feel the magic
+  </div> -->
+            </div>
+        </section>
+
+        <section class="container mt-4">
+            <!-- Section Header with creative badge -->
+            <div class="expertise-header">
+                <h2> Technical Expertise </h2>
+                <!-- <div class="expertise-sub">
+                    Specialized domains where creativity meets engineering excellence
+                </div> -->
+            </div>
+            <canvas id="expertiseParticleCanvas" class="expertise-particle-canvas"></canvas>
+
+            <div class="expertise-grid" id="expertiseGrid">
+                <div class="expertise-card" *ngFor="let exp of expertise"
+                    [style.background]="getExpertiseGradient(exp.id)" (click)="onExpertiseCardClick(exp)"
+                    (mouseenter)="onExpertiseCardMouseEnter($event, card)"
+                    (mousemove)="onExpertiseCardMousemove($event, card)" (mouseleave)="onExpertiseCardMouseleave(card)"
+                    #card>
+                    <div class="card-number">#{{ exp.id }}</div>
+                    <div class="expertise-icon">
+                        <i [class]="getExpertiseIcon(exp.title)"></i>
+                    </div>
+                    <h3>{{ exp.title }}</h3>
+                    <p>{{ exp.description | slice:0:130 }}{{ exp.description.length > 130 ? '...' : '' }}</p>
+                    <div class="expertise-meta">
+                        <span class="read-more">
+                            <i class="fas fa-arrow-right"></i> explore domain
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div style="text-align: center; margin-top: 20px; font-size: 0.75rem; opacity: 0.6">
+                <i class="fas fa-magic"></i> hover over cards to experience holographic interactions
+            </div> -->
+        </section>
+
+         <!-- project section -->
+        <div class="projects-section">
+            <canvas id="projectParticles" class="particle-canvas-project"></canvas>
+            <div class="mouse-energy" id="mouseEnergy"></div>
+
+            <div class="projects-header">
+                <!-- <div class="projects-badge">
+                    <i class="fas fa-cubes"></i> FEATURED PROJECTS <i class="fas fa-rocket"></i>
+                </div> -->
+                <h2> Live Projects </h2>
+                <div class="projects-sub">
+                    Explore my universe of digital creations — full-stack applications, ERP systems, and innovative platforms
+                </div>
+            </div>
+
+            <div class="projects-grid" id="projectsGrid">
+                <div class="project-card" *ngFor="let project of projects; let idx = index" 
+                    #projectCard
+                    (mouseenter)="onProjectCardMouseEnter($event, projectCard)"
+                    (mousemove)="onProjectCardMouseMove($event, projectCard)"
+                    (mouseleave)="onProjectCardMouseLeave($event, projectCard)">
+                    
+                    <div class="project-header">
+                        <span class="project-id">#{{ project.id }}</span>
+                        <span class="platform-badge">{{ project.platform }}</span>
+                    </div>
+
+                    <div class="project-name">{{ project.name }}</div>
+
+                    <div class="description-list">
+                        <li>{{ project.description?.dis1 }}</li>
+                        <li>{{ project.description?.dis2 }}</li>
+                        <li class="extra-desc" [ngClass]="{'show': expandedProject === project.id}">{{ project.description?.dis3 }}</li>
+                        <li class="extra-desc" [ngClass]="{'show': expandedProject === project.id}">{{ project.description?.dis4 }}</li>
+                    </div>
+
+                    <div class="tech-cloud">
+                        <span class="tech-orb" *ngFor="let tech of project.technologies">
+                            <i [class]="getTechIcon(tech)"></i> {{ tech }}
+                        </span>
+                    </div>
+
+                    <div class="project-footer">
+                        <button class="expand-btn" type="button" (click)="toggleProjectExpand(project.id)">
+                            <i class="fas fa-chevron-down"></i> 
+                            {{ expandedProject === project.id ? 'Show Less' : 'Show More' }}
+                        </button>
+                        <a [href]="project.url" target="_blank" rel="noopener noreferrer" class="project-link" 
+                            (click)="showProjectToast(project.name)">
+                            <i class="fas fa-external-link-alt"></i> Live Site
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="project-footer-text">
+                <i class="fas fa-hand-peace"></i> hover over cards → 3D morph + glowing energy
+            </div> -->
+        </div>
+
+        <section class="container-fluid mt-4">
+            <div class="mouse-glow" id="mouseGlow"></div>
+            <canvas id="cosmicCanvas"></canvas>
+            <div class="wrapper">
+                <div class="container">
+                    <!-- Section Header -->
+                    <div class="skills-header">
+                        <!-- <div class="skills-badge">
+                            <i class="fas fa-star-of-life"></i> TECH COSMOS <i class="fas fa-satellite-dish"></i>
+                        </div> -->
+                        <h2> Skills </h2>
+                        <!-- <div class="skills-sub">
+                            Interactive 3D proficiency orbs — each skill pulsates with cosmic energy
+                        </div> -->
+                    </div>
+
+                    <!-- CREATIVE TECH SECTION -->
+                    <section class="techs mt-4">
+                        <!-- <h4>
+                            <i class="fas fa-brain"></i>
+                            Mastery Constellation
+                            <i class="fas fa-charging-station"></i>
+                        </h4> -->
+                        <div class="tech-list" id="techGalaxy">
+                            <div class="tech-card" *ngFor="let skill of skills" #skillCard
+                                (mousemove)="onSkillMousemove($event, skillCard)"
+                                (mouseleave)="onSkillMouseleave(skillCard)"
+                                (click)="onSkillClick(skill, $event, skillCard)">
+                                <div class="tech-icon">
+                                    <i [class]="skill.icon || 'fas fa-star'"></i>
+                                </div>
+                                <div class="tech-name">{{ skill.name }}</div>
+                                <div class="proficiency-ring">
+                                    <svg viewBox="0 0 100 100">
+                                        <defs>
+                                            <linearGradient id="cosmicGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%" stop-color="#8b5cf6" />
+                                                <stop offset="50%" stop-color="#38bdf8" />
+                                                <stop offset="100%" stop-color="#c084fc" />
+                                            </linearGradient>
+                                        </defs>
+                                        <circle class="bg-ring" cx="50" cy="50" r="37"></circle>
+                                        <circle class="progress-ring" cx="50" cy="50" r="37"
+                                            [attr.stroke-dasharray]="circumference"
+                                            [attr.stroke-dashoffset]="circumference - (skill.proficiency / 100) * circumference"></circle>
+                                    </svg>
+                                    <div class="percent-value">
+                                        {{ skill.proficiency }}<small>%</small>
+                                    </div>
+                                </div>
+                                <div class="tech-sparkle">
+                                    <i class="fas fa-bolt"></i>
+                                    <span>expertise</span>
+                                    <i class="fas fa-charging-station"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- <div style="text-align: center; margin-top: 40px; font-size: 0.8rem; opacity: 0.7;">
+                        <i class="fas fa-hand-peace"></i> hover over any skill → 3D morph + energy burst
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+       
+
+        <!-- about details -->
+        <section class="profile-section">
+            <canvas id="profileParticles" class="particle-canvas"></canvas>
+            <div class="mouse-aura" id="mouseAura"></div>
+            <div class="profile-badge">
+                <div class="badge-chip">
+                    <i class="fas fa-id-card"></i> DIGITAL IDENTITY NEXUS <i class="fas fa-qrcode"></i>
+                </div>
+            </div>
+
+            <div class="profile-card"
+                #profileCardRef
+                (mouseenter)="onProfileCardMouseEnter($event, profileCardRef)"
+                (mousemove)="onProfileCardMouseMove($event, profileCardRef)"
+                (mouseleave)="onProfileCardMouseLeave($event, profileCardRef)">
+                <div class="profile-inner">
+                    <div class="profile-avatar-section">
+                        <div class="avatar-container">
+                            <div class="avatar-ring"></div>
+                            <div class="avatar-image">
+                                <img [src]="getProfileImageUrl()" [alt]="about?.name || 'Profile'" loading="lazy" />
+                            </div>
+                        </div>
+                        <div class="status-badge">
+                            <i class="fas fa-circle"></i> Available for opportunities
+                        </div>
+                    </div>
+
+                    <div class="profile-info-section">
+                        <div class="greeting">
+                            <i class="fas fa-hand-peace"></i> HELLO, I'M
+                        </div>
+                        <div class="profile-name">{{ about?.name }}</div>
+                        <div class="profile-title">
+                            <span>{{ about?.title }}</span>
+                            <span class="title-badge">
+                                <i class="fas fa-map-marker-alt"></i>
+                                {{ about?.residency || 'India' }}
+                            </span>
+                        </div>
+
+                        <div class="bio-text">{{ about?.bio }}</div>
+
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fas fa-calendar-alt"></i></div>
+                                <div class="info-content">
+                                    <div class="info-label">Date of Birth</div>
+                                    <div class="info-value">{{ about?.dob }}</div>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="info-content">
+                                    <div class="info-label">Address</div>
+                                    <div class="info-value">{{ about?.address }}</div>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fas fa-city"></i></div>
+                                <div class="info-content">
+                                    <div class="info-label">City</div>
+                                    <div class="info-value">{{ about?.city }}</div>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fas fa-globe"></i></div>
+                                <div class="info-content">
+                                    <div class="info-label">Residency</div>
+                                    <div class="info-value">{{ about?.residency }}</div>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fas fa-user-clock"></i></div>
+                                <div class="info-content">
+                                    <div class="info-label">Age</div>
+                                    <div class="info-value">{{ about?.age }} years</div>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                                <div class="info-content">
+                                    <div class="info-label">Email</div>
+                                    <div class="info-value">{{ about?.email }}</div>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                                <div class="info-content">
+                                    <div class="info-label">Phone</div>
+                                    <div class="info-value">{{ about?.phone }}</div>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fas fa-briefcase"></i></div>
+                                <div class="info-content">
+                                    <div class="info-label">Experience</div>
+                                    <div class="info-value">{{ about?.yearsOfExperience }}+ years</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="exp-highlight">
+                            <div class="exp-number">
+                                <span class="number">{{ about?.yearsOfExperience }}</span>
+                                <span class="label">+ Years Experience</span>
+                            </div>
+                            <div class="exp-cta">
+                                <button class="social-btn" type="button" (click)="copyEmail()" title="Copy email">
+                                    <i class="fas fa-envelope"></i>
+                                </button>
+                                <button class="social-btn" type="button" (click)="copyPhone()" title="Copy phone">
+                                    <i class="fas fa-phone-alt"></i>
+                                </button>
+                                <button class="social-btn" type="button" (click)="showLocation()" title="Show location">
+                                    <i class="fas fa-map-pin"></i>
+                                </button>
+                                <button class="contact-btn" type="button" (click)="downloadResume()">
+                                    <i class="fas fa-download"></i> Download Resume
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-fluid journey-section">
+            <div class="mouse-glow-global" id="mouseGlowGlobal"></div>
+            <canvas id="particleCanvasExp" class="particle-canvas-exp"></canvas>
+            <div class="wrapper">
+                <div class="container">
+                    <div class="journey-header">
+                        <!-- <div class="journey-badge">
+                            <i class="fas fa-rocket"></i>
+                            Career & Education Odyssey
+                            <i class="fas fa-meteor"></i>
+                        </div> -->
+                        <h2>  Career & Education </h2>
+                        <!-- <div class="journey-sub">
+                            Interactive dual timeline for experience and education powered by profile-data.json
+                        </div> -->
+                    </div>
+
+                    <div class="timeline-dual">
+                        <div class="timeline-column">
+                            <div class="column-header">
+                                <div class="icon-ring"><i class="fas fa-briefcase"></i></div>
+                                <h3>Experience</h3>
+                            </div>
+
+                            <div class="timeline-rail">
+                                <div class="timeline-card" *ngFor="let exp of experience; let i = index"
+                                    #timelineCardExp
+                                    (mouseenter)="onTimelineCardMouseEnter($event, timelineCardExp)"
+                                    (mousemove)="onTimelineCardMouseMove($event, timelineCardExp)"
+                                    (mouseleave)="onTimelineCardMouseLeave($event, timelineCardExp)"
+                                    [style.animationDelay]="(i * 0.1) + 's'">
+                                    <div class="card-header">
+                                        <h4 class="position-title">{{ exp.position }}</h4>
+                                        <span class="duration-badge">{{ exp.duration }}</span>
+                                    </div>
+                                    <div class="company-info">
+                                        <span class="company"><i class="fas fa-building"></i> {{ exp.company }}</span>
+                                        <span class="location"><i class="fas fa-map-marker-alt"></i> {{ exp.location }}</span>
+                                    </div>
+                                    <div class="tech-tags">
+                                        <span class="tech-tag" *ngFor="let tech of exp.technologies">
+                                            <i [class]="getTechIcon(tech)"></i> {{ tech }}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-column">
+                            <div class="column-header">
+                                <div class="icon-ring"><i class="fas fa-graduation-cap"></i></div>
+                                <h3>Education</h3>
+                            </div>
+
+                            <div class="timeline-rail">
+                                <div class="timeline-card" *ngFor="let edu of education; let i = index"
+                                    #timelineCardEdu
+                                    (mouseenter)="onTimelineCardMouseEnter($event, timelineCardEdu)"
+                                    (mousemove)="onTimelineCardMouseMove($event, timelineCardEdu)"
+                                    (mouseleave)="onTimelineCardMouseLeave($event, timelineCardEdu)"
+                                    [style.animationDelay]="(i * 0.1) + 's'">
+                                    <div class="card-header">
+                                        <h4 class="position-title">{{ edu.degree }} ({{ edu.qualification }})</h4>
+                                        <span class="duration-badge">{{ edu.duration }}</span>
+                                    </div>
+                                    <div class="company-info">
+                                        <span class="company"><i class="fas fa-school"></i> {{ edu.institution }}</span>
+                                    </div>
+                                    <div class="degree-info">Percentage: <strong>{{ edu.percentage }}</strong></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      
+
+        <!-- portfolio -->
+        <section class="portfolio-section" *ngIf="featuredPortfolio.length">
+            <canvas id="portfolioParticles" class="portfolio-particles"></canvas>
+            <div class="container">
+                <div class="portfolio-header">
+                    <!-- <div class="portfolio-badge">
+                        <i class="fas fa-cubes"></i> FEATURED PORTFOLIO
+                    </div> -->
+                    <h2>Portfolio</h2>
+                    <div class="portfolio-sub">
+                        Explore my universe of digital creations — full-stack applications, ERP systems, and innovative platforms
+                    </div>
+                </div>
+
+                <div class="featured-grid" id="featuredGrid">
+                    <div class="project-card" *ngFor="let project of featuredPortfolio; let idx = index" 
+                        #projectCard
+                        (mouseenter)="onProjectCardMouseEnter($event, projectCard)"
+                        (mousemove)="onProjectCardMouseMove($event, projectCard)"
+                        (mouseleave)="onProjectCardMouseLeave($event, projectCard)">
+
+                        <div class="project-thumbnail">
+                            <img [src]="project.thumbnail" [alt]="project.name" loading="lazy" />
+                            <div class="project-overlay">{{ project.category }}</div>
+                        </div>
+
+                        <div class="project-content">
+                            <div class="project-header">
+                                <span class="project-id">#{{ project.id }}</span>
+                                <span class="platform-badge">{{ project.tech }}</span>
+                            </div>
+
+                            <div class="project-name">{{ project.name }}</div>
+
+                            <p class="project-description">
+                                {{ project.modalTitle || project.name }}
+                            </p>
+
+                            <div class="project-tech-stack">
+                                <span class="tech-pill">{{ project.tech }}</span>
+                            </div>
+
+                            <div class="project-footer">
+                                <button class="view-details" type="button" (click)="openPortfolioModal(project)">
+                                    <span>View Details</span>
+                                    <i class="fas fa-long-arrow-alt-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="show-more-wrapper">
+                    <a routerLink="/portfolio" class="show-more-btn">
+                        <span>View All Projects</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="portfolio-modal" *ngIf="selectedPortfolioItem" (click)="closePortfolioModal()">
+                <div class="modal-content" (click)="$event.stopPropagation()">
+                    <button type="button" class="modal-close" (click)="closePortfolioModal()">&times;</button>
+                    <h3 class="modal-title">{{ selectedPortfolioItem.modalTitle || selectedPortfolioItem.name }}</h3>
+                    <div class="modal-images">
+                        <div class="modal-img-card" *ngFor="let image of selectedPortfolioItem.modalImages">
+                            <img [src]="image.src" [alt]="image.alt" loading="lazy" />
+                            <div class="modal-img-desc">{{ image.desc }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+          <section class="techs mt-4">
+            <h4>Technologies</h4>
+            <div class="tech-list">
+                <span class="tech" *ngFor="let t of technologies">{{ t.name }}</span>
+            </div>
+        </section>
+
+        <!-- <section class="profile-section mt-4">
+            <app-profile></app-profile>
+        </section> -->
+    </main>
+
+    <!-- Floating Action Button with Social Links Menu -->
+    <div class="fab-container">
+        <!-- Social Menu Backdrop -->
+        <div class="fab-backdrop" *ngIf="showSocialMenu" (click)="closeSocialMenu()"></div>
+
+        <!-- Social Links Menu -->
+        <div class="social-menu open" *ngIf="showSocialMenu">
+            <!-- WhatsApp -->
+            <button class="social-link-item whatsapp" (click)="openWhatsApp()" title="Chat on WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+                <span class="tooltip">WhatsApp</span>
+            </button>
+
+            <!-- LinkedIn -->
+            <button class="social-link-item linkedin" 
+                (click)="openSocialLink(socialLinks?.linkedin, 'linkedin')"
+                *ngIf="socialLinks?.linkedin"
+                title="LinkedIn Profile">
+                <i class="fab fa-linkedin-in"></i>
+                <span class="tooltip">LinkedIn</span>
+            </button>
+
+            <!-- GitHub -->
+            <button class="social-link-item github" 
+                (click)="openSocialLink(socialLinks?.github, 'github')"
+                *ngIf="socialLinks?.github"
+                title="GitHub Profile">
+                <i class="fab fa-github"></i>
+                <span class="tooltip">GitHub</span>
+            </button>
+
+            <!-- GitLab -->
+            <button class="social-link-item gitlab" 
+                (click)="openSocialLink(socialLinks?.gitlab, 'gitlab')"
+                *ngIf="socialLinks?.gitlab"
+                title="GitLab Profile">
+                <i class="fab fa-gitlab"></i>
+                <span class="tooltip">GitLab</span>
+            </button>
+
+            <!-- Twitter -->
+            <!-- <button class="social-link-item twitter" 
+                (click)="openSocialLink(socialLinks?.twitter, 'twitter')"
+                *ngIf="socialLinks?.twitter"
+                title="Twitter Profile">
+                <i class="fab fa-twitter"></i>
+                <span class="tooltip">Twitter</span>
+            </button> -->
+
+            <!-- Instagram -->
+            <button class="social-link-item instagram" 
+                (click)="openSocialLink(socialLinks?.instagram, 'instagram')"
+                *ngIf="socialLinks?.instagram"
+                title="Instagram Profile">
+                <i class="fab fa-instagram"></i>
+                <span class="tooltip">Instagram</span>
+            </button>
+
+            <!-- Facebook -->
+            <button class="social-link-item facebook" 
+                (click)="openSocialLink(socialLinks?.facebook, 'facebook')"
+                *ngIf="socialLinks?.facebook"
+                title="Facebook Profile">
+                <i class="fab fa-facebook-f"></i>
+                <span class="tooltip">Facebook</span>
+            </button>
+        </div>
+
+        <!-- Main FAB Button -->
+        <button class="fab-button" (click)="toggleSocialMenu($event)" 
+            [class.active]="showSocialMenu"
+            title="Connect with me">
+            <i class="fas fa-share-alt" *ngIf="!showSocialMenu"></i>
+            <i class="fas fa-times" *ngIf="showSocialMenu"></i>
+        </button>
+    </div>
+
+    <app-footer></app-footer>
+</div>

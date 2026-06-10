@@ -1,0 +1,111 @@
+
+ <app-navbar></app-navbar>
+<div class="page about-page container">
+ 
+
+  <!-- About hero (uses theme header, local nav removed) -->
+  <div class="about-hero">
+    <div class="hero-left">
+      <div class="profile-badge">Full Stack Developer</div>
+      <h1>I'm <span>{{ about?.name }}</span></h1>
+      <div class="title-tag">
+        <i class="fas fa-code"></i>
+        {{ about?.title }} | {{ about?.yearsOfExperience }}+ Years
+        <span class="residency"><i class="fas fa-map-marker-alt"></i> {{ about?.residency || about?.city }}</span>
+      </div>
+
+      <p class="bio-text">{{ about?.bio }}</p>
+
+      <div class="info-grid">
+        <div class="info-item"><i class="fas fa-phone-alt"></i><div><div class="label">Phone</div><div class="value">{{ about?.phone }}</div></div></div>
+        <div class="info-item"><i class="fas fa-envelope"></i><div><div class="label">Email</div><div class="value">{{ about?.email }}</div></div></div>
+        <div class="info-item"><i class="fas fa-calendar-alt"></i><div><div class="label">DOB</div><div class="value">{{ about?.dob }}</div></div></div>
+        <div class="info-item"><i class="fas fa-map-pin"></i><div><div class="label">Address</div><div class="value">{{ about?.address }}</div></div></div>
+        <div class="info-item"><i class="fas fa-globe-asia"></i><div><div class="label">Residency</div><div class="value">{{ about?.residency }}</div></div></div>
+        <div class="info-item"><i class="fas fa-user-check"></i><div><div class="label">Age</div><div class="value">{{ about?.age }}</div></div></div>
+      </div>
+
+      <div class="contact-mini">
+        <a class="btn-cv" href="#" (click)="downloadResume($event)"><i class="fas fa-download"></i> Download Resume</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="profile-image-card">
+        <img [src]="about?.profileImage || 'assets/images/profile.jpg'" alt="{{ about?.name }}" onerror="this.onerror=null; this.src='https://placehold.co/400x400/1E293B/60A5FA?text=Sivaranjith'">
+      </div>
+    </div>
+  </div>
+
+  <!-- Objective -->
+  <div class="objective-block" *ngIf="objective">
+    <h3><i class="fas fa-bullseye" style="color:#3B82F6"></i> {{ objective.title }}</h3>
+    <p>{{ objective.description }}</p>
+  </div>
+
+  <!-- Expertise -->
+  <div>
+    <h2 class="section-title"><i class="fas fa-cogs"></i> Core Expertise</h2>
+    <div class="expertise-grid">
+      <div class="expert-card" *ngFor="let ex of expertise">
+        <h4>{{ ex.title }}</h4>
+        <p>{{ ex.description }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Experience timeline -->
+  <div>
+    <h2 class="section-title"><i class="fas fa-briefcase"></i> Work Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item" *ngFor="let e of experience">
+        <div class="timeline-header"><span class="position">{{ e.position }}</span><span class="duration">{{ e.duration }}</span></div>
+        <div class="company">{{ e.company }} · {{ e.location }}</div>
+        <div class="location"><i class="fas fa-map-marker-alt"></i> {{ e.location }}</div>
+        <div class="tech-stack"><span class="tech-badge" *ngFor="let t of e.technologies">{{ t }}</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Education & Stats -->
+  <div class="edu-stats-wrapper">
+    <div class="education-col">
+      <h2 class="section-title" style="margin-top:0"><i class="fas fa-graduation-cap"></i> Education</h2>
+      <div class="edu-card" *ngFor="let ed of education">
+        <div class="edu-degree">{{ ed.degree }} <span style="color:#FBBF24;">({{ ed.percentage }})</span></div>
+        <div class="edu-institution">{{ ed.institution }}</div>
+        <div class="edu-meta"><span>{{ ed.duration }}</span><span>Qualification: {{ ed.qualification }}</span></div>
+      </div>
+    </div>
+
+    <div class="stats-col">
+      <h2 class="section-title" style="margin-top:0"><i class="fas fa-chart-line"></i> Milestones</h2>
+      <div class="stats-grid">
+        <div class="stat-card" *ngFor="let s of statistics">
+          <div class="stat-number">{{ s.number }}</div>
+          <div class="stat-label">{{ s.label }}</div>
+          <div class="stat-options"><span class="stat-opt" *ngFor="let o of s.options">{{ o.label }}</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hobbies -->
+  <div>
+    <h2 class="section-title"><i class="fas fa-heart"></i> Beyond Code · Hobbies</h2>
+    <div class="hobbies-wrap">
+      <div class="hobby-item" *ngFor="let h of hobbies"><i [ngClass]="h.icon"></i> {{ h.name }}</div>
+    </div>
+  </div>
+
+  <!-- Banner showcase -->
+  <div class="banner-showcase" *ngIf="about">
+    <div class="banner-img" [style.background-image]="'url(' + (about.bannerImg2 || about.profileImage) + ')'" ></div>
+    <div class="banner-img" [style.background-image]="'url(' + (about.bannerImg3 || about.profileImage) + ')'" ></div>
+  </div>
+
+  <footer>
+    <p>© {{ footer?.copyright || '2025' }} — {{ about?.name }}</p>
+  </footer>
+
+</div>

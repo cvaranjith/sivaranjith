@@ -1,0 +1,285 @@
+ /* ---- ✨ CREATIVE NAVBAR DESIGN : Glass + animated underline + magnetic micro-interactions ---- */
+    /* we preserve core angular logic classes (app-nav, nav-toggle, .open, .active) but completely reimagine visuals & motion */
+
+    .app-nav {
+      position: sticky;
+      top: 1rem;          /* floating effect with gap from top */
+      margin: 0 1rem;
+      z-index: 1000;
+      border-radius: 3rem;
+      background: rgba(8, 12, 24, 0.65);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(139, 92, 246, 0.35);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), 0 0 0 0.5px rgba(139, 92, 246, 0.2) inset;
+      transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    }
+
+    /* subtle glow on scroll shadow */
+    .app-nav.scrolled {
+      background: rgba(5, 8, 18, 0.8);
+      border-color: rgba(139, 92, 246, 0.6);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(139, 92, 246, 0.4) inset;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.2rem;
+      min-height: 70px;
+    }
+
+    /* brand: dynamic neon + logo effect */
+    .app-nav .brand {
+      font-family: 'Space Grotesk', monospace;
+      font-weight: 700;
+      font-size: 1.9rem;
+      letter-spacing: -0.02em;
+      background: linear-gradient(130deg, #c084fc, #60a5fa, #38bdf8);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-decoration: none;
+      transition: all 0.2s;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .brand::after {
+      content: '*';
+      font-size: 1.4rem;
+      background: none;
+      -webkit-background-clip: unset;
+      background-clip: unset;
+      color: #c084fc;
+      font-weight: 400;
+      opacity: 0.8;
+    }
+
+    .brand:hover {
+      transform: scale(1.02);
+      filter: drop-shadow(0 0 6px rgba(192, 132, 252, 0.5));
+    }
+
+    /* desktop nav-list – reimagined with chip-like design & micro animations */
+    .nav-list {
+      list-style: none;
+      display: flex;
+      gap: 0.6rem;
+      margin: 0;
+      padding: 0.2rem;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 4rem;
+      backdrop-filter: blur(4px);
+    }
+
+    .nav-list li {
+      position: relative;
+    }
+
+    .nav-list a {
+      display: inline-block;
+      padding: 0.6rem 1.3rem;
+      font-weight: 500;
+      font-size: 0.95rem;
+      font-family: 'Inter', sans-serif;
+      color: #eef2ff;
+      text-decoration: none;
+      border-radius: 3rem;
+      transition: all 0.25s ease;
+      letter-spacing: -0.2px;
+      backdrop-filter: blur(2px);
+      background: transparent;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* active / hover: pill with glass + neon underline effect */
+    .nav-list a::before {
+      content: '';
+      position: absolute;
+      bottom: 6px;
+      left: 1rem;
+      right: 1rem;
+      height: 2px;
+      background: linear-gradient(90deg, #a855f7, #06b6d4);
+      border-radius: 4px;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    }
+
+    .nav-list a:hover {
+      color: white;
+      background: rgba(139, 92, 246, 0.2);
+      text-shadow: 0 0 6px rgba(139, 92, 246, 0.5);
+    }
+
+    .nav-list a:hover::before {
+      transform: scaleX(1);
+    }
+
+    /* active state: strong glow & different background */
+    .nav-list a.active {
+      background: linear-gradient(105deg, rgba(99, 102, 241, 0.25), rgba(139, 92, 246, 0.3));
+      color: white;
+      font-weight: 600;
+      box-shadow: 0 0 12px rgba(139, 92, 246, 0.3);
+    }
+
+    .nav-list a.active::before {
+      transform: scaleX(1);
+      background: linear-gradient(90deg, #f0abfc, #38bdf8);
+      height: 2.5px;
+      bottom: 4px;
+    }
+
+    /* ----- HAMBURGER TOGGLE (creative morphing) ----- */
+    .nav-toggle {
+      display: none;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(139, 92, 246, 0.5);
+      border-radius: 40px;
+      width: 48px;
+      height: 48px;
+      cursor: pointer;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s;
+      backdrop-filter: blur(12px);
+      padding: 0;
+    }
+
+    .nav-toggle span {
+      width: 24px;
+      height: 2px;
+      background: linear-gradient(90deg, #c084fc, #60a5fa);
+      display: block;
+      border-radius: 4px;
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    /* toggle open animation (transform to X) */
+    .nav-toggle.open span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+      width: 26px;
+    }
+
+    .nav-toggle.open span:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+
+    .nav-toggle.open span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+      width: 26px;
+    }
+
+    /* responsive: mobile-first creative drawer */
+    @media (max-width: 860px) {
+      .app-nav {
+        top: 0.8rem;
+        margin: 0 0.8rem;
+        border-radius: 2rem;
+      }
+      
+      .nav-toggle {
+        display: flex;
+      }
+
+      .nav-list {
+        position: absolute;
+        right: 0.8rem;
+        top: calc(100% + 10px);
+        flex-direction: column;
+        background: rgba(10, 16, 30, 0.96);
+        backdrop-filter: blur(28px);
+        border-radius: 1.8rem;
+        padding: 1.2rem 0.8rem;
+        gap: 0.5rem;
+        min-width: 210px;
+        display: none;
+        border: 1px solid rgba(139, 92, 246, 0.5);
+        box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5), 0 0 0 0.5px rgba(168, 85, 247, 0.3) inset;
+        transition: all 0.2s;
+      }
+
+      .nav-list.open {
+        display: flex;
+        animation: slideDownFade 0.25s ease forwards;
+      }
+
+      @keyframes slideDownFade {
+        from {
+          opacity: 0;
+          transform: translateY(-12px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .nav-list li {
+        width: 100%;
+      }
+
+      .nav-list a {
+        display: block;
+        padding: 0.8rem 1.2rem;
+        text-align: center;
+        font-size: 1rem;
+        border-radius: 2rem;
+        background: rgba(255,255,255,0.02);
+      }
+
+      .nav-list a::before {
+        display: none;  /* cleaner on mobile, use background change */
+      }
+
+      .nav-list a.active {
+        background: linear-gradient(95deg, #6d28d9, #4c1d95);
+        color: white;
+        box-shadow: 0 4px 12px rgba(109, 40, 217, 0.4);
+      }
+
+      .nav-list a:hover {
+        background: rgba(139, 92, 246, 0.3);
+      }
+    }
+
+    /* add floating indicator for active page – modern cursor effect */
+    .nav-list a:active {
+      transform: scale(0.96);
+    }
+
+    /* optional: custom scroll behavior */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* active route demo marker */
+    .page-marker {
+      text-align: center;
+      color: #a0aec0;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 2rem;
+    }
+
+    i.fa, i.far, i.fas {
+      pointer-events: none;
+    }

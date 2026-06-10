@@ -1,0 +1,72 @@
+<div class="portfolio-detail" *ngIf="!loading">
+  <div *ngIf="project; else notFound" class="detail-wrapper">
+    <div class="hero" [ngStyle]="{'background-image': 'linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(' + (project.thumbnail || '') + ')'}">
+      <div class="hero-inner container">
+        <button class="back" (click)="goBack()">← Back</button>
+        <div class="title">
+          <h1>{{ project.name }}</h1>
+          <div class="meta">{{ project.category }} • {{ project.tech }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container detail-body">
+      <div class="main">
+        <div class="section intro">
+          <h2>Overview</h2>
+          <ng-container *ngIf="descriptionList && descriptionList.length; else noDesc">
+            <p *ngFor="let d of descriptionList">{{ d }}</p>
+          </ng-container>
+          <ng-template #noDesc>
+            <p>{{ project.description || 'No description provided.' }}</p>
+          </ng-template>
+        </div>
+
+        <div class="section gallery" *ngIf="project.modalImages && project.modalImages.length">
+          <h2>Screenshots</h2>
+          <div class="image-grid">
+            <div class="image-item" *ngFor="let img of project.modalImages; let i = index">
+              <img [src]="img.src" [alt]="img.alt || project.name" loading="lazy" (error)="img.src='https://placehold.co/800x500/1F2A44/60A5FA?text=Preview+Unavailable'" (click)="openLightbox(i)">
+              <div class="caption">{{ img.desc || img.alt }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <div class="card details-card">
+          <h3>Project Details</h3>
+          <ul>
+            <li><strong>Category:</strong> {{ project.category }}</li>
+            <li><strong>Tech stack:</strong> {{ project.tech }}</li>
+            <li *ngIf="project.url"><strong>URL:</strong> <a [href]="project.url" target="_blank" rel="noopener">{{ project.url }}</a></li>
+            <li *ngIf="project.modalImages"><strong>Screenshots:</strong> {{ project.modalImages.length }}</li>
+          </ul>
+        </div>
+
+        <div class="card share-card">
+          <h4>Share / Actions</h4>
+          <button (click)="goBack()" class="btn">Back to list</button>
+        </div>
+      </aside>
+    </div>
+    <!-- Lightbox overlay -->
+    <div class="lightbox" *ngIf="lightboxOpen" (click)="closeLightbox()">
+      <div class="lightbox-inner" (click)="$event.stopPropagation()">
+        <button class="close-x" (click)="closeLightbox()">×</button>
+        <button class="nav prev" (click)="prevImage()">‹</button>
+        <img class="lightbox-img" [src]="project.modalImages[currentImageIndex].src" [alt]="project.modalImages[currentImageIndex].alt || project.name" (error)="project.modalImages[currentImageIndex].src='https://placehold.co/1200x800/1F2A44/60A5FA?text=Preview+Unavailable'">
+        <button class="nav next" (click)="nextImage()">›</button>
+        <div class="lightbox-caption">{{ project.modalImages[currentImageIndex].desc || project.modalImages[currentImageIndex].alt }}</div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #notFound>
+    <div class="not-found container">
+      <h2>Project not found</h2>
+      <p>The requested project does not exist or was removed.</p>
+      <button class="btn" (click)="goBack()">Return to portfolio</button>
+    </div>
+  </ng-template>
+</div>

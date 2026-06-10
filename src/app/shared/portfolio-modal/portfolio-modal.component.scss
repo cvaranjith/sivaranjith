@@ -1,0 +1,19 @@
+.gallery {
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(15,23,42,.92);
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.desc {
+  padding: 10px;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  text-align: center;
+}

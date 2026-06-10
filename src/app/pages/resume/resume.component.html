@@ -1,0 +1,67 @@
+
+ <app-navbar></app-navbar>
+<div class="container resume-page">
+ 
+
+  <div class="resume-header">
+    <h1>Experience & Credentials</h1>
+    <p>{{ about.bio || 'Professional experience and education.' }}</p>
+    <div class="stats-mini">
+      <span class="stat-pill"><i class="fas fa-briefcase"></i> {{ about.yearsOfExperience || '0+' }} Years</span>
+      <span class="stat-pill"><i class="fas fa-code-branch"></i> {{ skills.length }}+ Technologies</span>
+      <!-- <span class="stat-pill"><i class="fas fa-trophy"></i> {{  || '0+' }}+ Projects</span> -->
+    </div>
+    <button class="btn-cv" (click)="downloadResume()"><i class="fas fa-download"></i> Download Resume </button>
+  </div>
+
+  <div class="resume-grid">
+    <div class="timeline-section">
+      <h2><i class="fas fa-briefcase"></i> Work Journey</h2>
+      <div class="timeline">
+        <div class="timeline-card" *ngFor="let item of experience">
+          <div class="card-header">
+            <div>
+              <div class="position">{{ item.position }}</div>
+              <div class="company-detail">{{ item.company }} • {{ item.location }}</div>
+            </div>
+            <div class="duration-badge">{{ item.duration }}</div>
+          </div>
+          <div class="tech-stack">
+            <span class="tech-tag" *ngFor="let tech of item.technologies">{{ tech }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-panel">
+      <div>
+        <h2><i class="fas fa-graduation-cap"></i> Academic Path</h2>
+        <div class="education-list">
+          <div class="edu-card" *ngFor="let edu of education">
+            <div class="edu-degree">
+              <div>{{ edu.degree }} <span class="edu-qual">{{ edu.qualification }}</span></div>
+              <div class="edu-percent">{{ edu.percentage }}</div>
+            </div>
+            <div class="edu-institution">{{ edu.institution }}</div>
+            <div class="edu-meta">{{ edu.duration }}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-wrapper">
+        <h2 style="font-size:1.5rem; margin-bottom:8px;"><i class="fas fa-cogs"></i> Technical Proficiency</h2>
+        <div class="skills-grid">
+          <div class="skill-item" *ngFor="let skill of skills">
+            <i [class]="skill.icon"></i>
+            <div class="skill-info">
+              <div class="skill-name">{{ skill.name }}</div>
+              <div class="skill-bar"><div class="skill-progress" [style.width.%]="skill.proficiency"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>

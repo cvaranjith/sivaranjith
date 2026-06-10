@@ -1,0 +1,40 @@
+<div class="fab-container">
+  <div class="fab-backdrop" *ngIf="showSocialMenu" (click)="closeSocialMenu()"></div>
+
+  <div class="social-menu open" *ngIf="showSocialMenu">
+    <button class="social-link-item whatsapp" (click)="openWhatsApp()" title="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+      <span class="tooltip">WhatsApp</span>
+    </button>
+
+    <button class="social-link-item linkedin" (click)="openSocialLink(getLinkUrl('linkedin'), 'linkedin')" *ngIf="hasLink('linkedin')" title="LinkedIn Profile">
+      <i class="fab fa-linkedin-in"></i>
+      <span class="tooltip">LinkedIn</span>
+    </button>
+
+    <button class="social-link-item github" (click)="openSocialLink(getLinkUrl('github'), 'github')" *ngIf="hasLink('github')" title="GitHub Profile">
+      <i class="fab fa-github"></i>
+      <span class="tooltip">GitHub</span>
+    </button>
+
+    <button class="social-link-item gitlab" (click)="openSocialLink(getLinkUrl('gitlab'), 'gitlab')" *ngIf="hasLink('gitlab')" title="GitLab Profile">
+      <i class="fab fa-gitlab"></i>
+      <span class="tooltip">GitLab</span>
+    </button>
+
+    <button class="social-link-item instagram" (click)="openSocialLink(getLinkUrl('instagram'), 'instagram')" *ngIf="hasLink('instagram')" title="Instagram Profile">
+      <i class="fab fa-instagram"></i>
+      <span class="tooltip">Instagram</span>
+    </button>
+
+    <button class="social-link-item facebook" (click)="openSocialLink(getLinkUrl('facebook'), 'facebook')" *ngIf="hasLink('facebook')" title="Facebook Profile">
+      <i class="fab fa-facebook-f"></i>
+      <span class="tooltip">Facebook</span>
+    </button>
+  </div>
+
+  <button class="fab-button" (click)="toggleSocialMenu($event)" [class.active]="showSocialMenu" title="Connect with me">
+    <i class="fas fa-share-alt" *ngIf="!showSocialMenu"></i>
+    <i class="fas fa-times" *ngIf="showSocialMenu"></i>
+  </button>
+</div>

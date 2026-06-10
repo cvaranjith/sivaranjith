@@ -1,0 +1,83 @@
+
+  <app-navbar></app-navbar>
+
+<div class="container contact-page">
+
+  <div class="contact-hero">
+    <h1>Let's talk & build</h1>
+    <p>Have a project in mind? Or just want to say hello — I'm one message away.</p>
+  </div>
+
+  <div class="contact-grid">
+    <div class="info-side">
+      <div class="section-mini-title"><i class="fas fa-circle-info"></i> <span>Get in touch</span></div>
+
+      <div class="contact-detail-card">
+        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+        <div class="detail-text">
+          <h4>Email me</h4>
+          <p>{{ contact?.email }}</p>
+        </div>
+      </div>
+
+      <div class="contact-detail-card">
+        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+        <div class="detail-text">
+          <h4>Call / WhatsApp</h4>
+          <p>{{ contact?.phone }}</p>
+        </div>
+      </div>
+
+      <div class="contact-detail-card">
+        <div class="contact-icon"><i class="fas fa-map-pin"></i></div>
+        <div class="detail-text">
+          <h4>Based in</h4>
+          <p>{{ contact?.location }}</p>
+        </div>
+      </div>
+
+      <div class="map-placeholder">
+        <a [href]="contact?.mapUrl || 'https://www.google.co.in/maps'" target="_blank" class="map-link">
+          <i class="fas fa-map-marker-alt"></i> Open in Google Maps
+        </a>
+        <div style="font-size:0.8rem; margin-top: 12px; color:#6C86A3;"><i class="fas fa-globe"></i> {{ contact?.location }}</div>
+      </div>
+
+      <div class="social-section">
+        <div class="section-mini-title"><i class="fas fa-share-alt"></i> <span>Connect globally</span></div>
+        <div class="social-grid">
+          <a *ngIf="contact?.socialLinks?.linkedin" [href]="contact.socialLinks.linkedin" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+          <a *ngIf="contact?.socialLinks?.github" [href]="contact.socialLinks.github" target="_blank" class="social-btn"><i class="fab fa-github"></i> GitHub</a>
+          <a *ngIf="contact?.socialLinks?.gitlab" [href]="contact.socialLinks.gitlab" target="_blank" class="social-btn"><i class="fab fa-gitlab"></i> GitLab</a>
+          <a *ngIf="contact?.socialLinks?.instagram" [href]="contact.socialLinks.instagram" target="_blank" class="social-btn"><i class="fab fa-instagram"></i> Instagram</a>
+          <a *ngIf="contact?.socialLinks?.twitter" [href]="contact.socialLinks.twitter" target="_blank" class="social-btn"><i class="fab fa-twitter"></i> Twitter</a>
+          <a *ngIf="contact?.socialLinks?.facebook" [href]="contact.socialLinks.facebook" target="_blank" class="social-btn"><i class="fab fa-facebook-f"></i> Facebook</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-side">
+      <h3><i class="fab fa-whatsapp" style="color:#25D366"></i> Drop a message</h3>
+      <div class="form-sub">Your message will be sent directly to my WhatsApp — quick & personal.</div>
+
+      <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+        <div class="input-group">
+          <label><i class="far fa-user"></i> Your name</label>
+          <input name="name" ngModel required />
+        </div>
+        <div class="input-group">
+          <label><i class="far fa-envelope"></i> Email address</label>
+          <input name="email" ngModel type="email" required />
+        </div>
+        <div class="input-group">
+          <label><i class="far fa-comment-dots"></i> Message</label>
+          <textarea name="message" ngModel rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Send via WhatsApp</button>
+        <div class="form-footer">Your info is safe & will be shared only for conversation.</div>
+      </form>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>

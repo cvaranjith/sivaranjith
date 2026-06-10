@@ -1,0 +1,109 @@
+.portfolio-section {
+	padding: 28px 16px;
+
+	.section-title {
+		font-size: 1.6rem;
+		font-weight: 700;
+		margin-bottom: 20px;
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		color: #e6eef8;
+	}
+
+	.portfolio-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+		gap: 24px;
+	}
+
+	.portfolio-card {
+		background: #0F151F;
+		border-radius: 20px;
+		overflow: hidden;
+		border: 1px solid rgba(46,58,80,0.6);
+		transition: transform .25s ease, box-shadow .25s ease;
+	}
+
+	.portfolio-card.live { background: linear-gradient(180deg, rgba(11,18,32,0.6), rgba(8,12,20,0.6)); }
+
+	.live-banner {
+		height: 72px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: linear-gradient(90deg,#0b1220,#071026);
+	}
+
+	.live-platform { color: #93c5fd; font-weight: 700; }
+
+	.live-desc { color: #cbd5e1; margin: 10px 0; font-size: 0.95rem; }
+
+	.portfolio-card:hover {
+		transform: translateY(-8px);
+		box-shadow: 0 20px 30px -15px rgba(0,0,0,0.6);
+		border-color: #3B82F6;
+	}
+
+	.card-img {
+		height: 200px;
+		background-size: cover;
+		background-position: center;
+		position: relative;
+	}
+
+	.card-overlay {
+		position: absolute;
+		inset: 0;
+		background: rgba(0,0,0,0.45);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		opacity: 0;
+		transition: opacity .18s ease;
+		color: #fff;
+		font-size: 2rem;
+	}
+
+	.portfolio-card:hover .card-overlay { opacity: 1; }
+
+	.card-content {
+		padding: 18px;
+	}
+
+	.category-badge {
+		display: inline-block;
+		background: rgba(59,130,246,0.12);
+		padding: 6px 12px;
+		border-radius: 999px;
+		font-size: 0.75rem;
+		color: #93C5FD;
+		margin-bottom: 12px;
+		font-weight: 600;
+	}
+
+	h3 { font-size: 1.2rem; margin: 6px 0 10px; color: #e6eef8; }
+
+	.tech-stack { color: #a0aec0; font-size: 0.85rem; margin-bottom: 12px; }
+
+	.btn-view {
+		background: transparent;
+		border: 1px solid #3B82F6;
+		padding: 8px 16px;
+		border-radius: 999px;
+		color: #60A5FA;
+		font-weight: 600;
+		cursor: pointer;
+		transition: background .15s ease, color .15s ease;
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+	}
+
+	.btn-view:hover { background: #3B82F6; color: #fff; }
+
+	@media (max-width: 680px) {
+		.portfolio-grid { grid-template-columns: 1fr; }
+		.card-img { height: 180px; }
+	}
+}
